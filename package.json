@@ -1,0 +1,13 @@
+{
+  "name": "Cap Wallet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run preview --prefix frontend"
+  },
+  "keywords": [],
+  "author": "Ibrahim Abdullahi <kaliibro777@gmail.com>",
+  "license": "ISC"
+}
