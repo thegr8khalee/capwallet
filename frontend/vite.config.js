@@ -7,6 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: false,
@@ -22,8 +23,11 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: false,
+    host: true,
+    origin: 'https://capwallet.onrender.com',
   },
   preview: {
     port: 4173,
+    host: true,
   },
 })
