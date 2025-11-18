@@ -2,36 +2,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
+import { PenIcon, CloudIcon, LockIcon } from 'lucide-react';
 
 const SelfCustodySecurity = () => {
   const securityFeatures = [
     {
       title: 'Local Private Key Generation',
-      description: 'Your keys are created directly on your device using cryptographically secure randomness.',
+      description:
+        'Your keys are created directly on your device using cryptographically secure randomness.',
       bg: 'bg-primary',
       textColor: 'text-white',
-      img: 'local-keygen.svg'
+      img: 'local-keygen.svg',
     },
     {
       title: 'End-to-End Encryption',
-      description: 'If you use cloud backup, your keys are encrypted locally before upload—Cap Wallet never sees them.',
+      description:
+        'If you use cloud backup, your keys are encrypted locally before upload—Cap Wallet never sees them.',
       bg: 'bg-accent',
       textColor: 'text-secondary',
-      img: 'encryption.svg'
+      img: 'encryption.svg',
     },
     {
       title: 'No Server-Side Storage',
-      description: 'We don\'t store your private keys, seed phrases, or passwords.',
+      description:
+        "We don't store your private keys, seed phrases, or passwords.",
       bg: 'bg-black',
       textColor: 'text-white',
-      img: 'serverless.svg'
+      img: 'serverless.svg',
     },
     {
       title: 'Biometric Security',
-      description: 'Face ID / Touch ID protect your local wallet from unauthorized access.',
+      description:
+        'Face ID / Touch ID protect your local wallet from unauthorized access.',
       bg: 'bg-white',
       textColor: 'text-black',
-      img: 'biometric.svg'
+      img: 'biometric.svg',
     },
   ];
 
@@ -39,23 +44,23 @@ const SelfCustodySecurity = () => {
     {
       title: 'Manual Seed Phrase',
       description: 'Write down 12 or 24 words. Store them offline.',
-      icon: '📝',
+      icon: PenIcon,
     },
     {
       title: 'Encrypted Cloud Backup',
       description: 'Encrypted before upload. Only you can decrypt.',
-      icon: '☁️',
+      icon: CloudIcon,
     },
     {
       title: 'Hardware Wallet Integration',
       description: 'Pair with Ledger, Trezor, and more.',
-      icon: '🔐',
+      icon: LockIcon,
     },
   ];
 
   const whyItMatters = [
-    'You\'re not relying on a company\'s solvency',
-    'You can\'t be locked out arbitrarily',
+    "You're not relying on a company's solvency",
+    "You can't be locked out arbitrarily",
     'No middleman can freeze or censor your funds',
     'You maintain sovereignty over your digital assets',
   ];
@@ -71,15 +76,18 @@ const SelfCustodySecurity = () => {
   const faqs = [
     {
       question: 'What if I lose my phone?',
-      answer: 'As long as you backed up your seed phrase or used encrypted cloud backup, you can restore your wallet on a new device.',
+      answer:
+        'As long as you backed up your seed phrase or used encrypted cloud backup, you can restore your wallet on a new device.',
     },
     {
       question: 'What if I forget my password?',
-      answer: 'If you have your seed phrase, you can restore. Without it, funds are unrecoverable—that\'s the nature of true self-custody.',
+      answer:
+        "If you have your seed phrase, you can restore. Without it, funds are unrecoverable—that's the nature of true self-custody.",
     },
     {
       question: 'Is self-custody harder than using Coinbase?',
-      answer: 'Cap Wallet makes it as easy as possible—but yes, you\'re responsible for your own security. In return, you get full control.',
+      answer:
+        "Cap Wallet makes it as easy as possible—but yes, you're responsible for your own security. In return, you get full control.",
     },
   ];
 
@@ -132,12 +140,14 @@ const SelfCustodySecurity = () => {
           What Self-Custody Means
         </h2>
         <p className="text-lg text-gray-600 mb-6">
-          When you use Cap Wallet, you—and only you—control your private keys. There is no central server.
-          No company holding your funds. No CEO who can lock you out.
+          When you use Cap Wallet, you—and only you—control your private keys.
+          There is no central server. No company holding your funds. No CEO who
+          can lock you out.
         </p>
         <p className="text-lg text-gray-600">
-          If you lose access to your keys, no one can recover them. That\'s the trade-off for absolute control.
-          We give you every tool to back up and protect your keys—but you\'re in the driver\'s seat.
+          If you lose access to your keys, no one can recover them. That\'s the
+          trade-off for absolute control. We give you every tool to back up and
+          protect your keys—but you\'re in the driver\'s seat.
         </p>
       </motion.section>
 
@@ -151,7 +161,10 @@ const SelfCustodySecurity = () => {
         <h1 className="px-4 sm:px-6 text-start font-montserrat text-secondary font-bold text-5xl md:text-6xl mb-4">
           Security Features
         </h1>
-        <div className="w-full flex overflow-x-auto overflow-y-hidden" style={{ scrollbarWidth: 'none' }}>
+        <div
+          className="w-full flex overflow-x-auto overflow-y-hidden"
+          style={{ scrollbarWidth: 'none' }}
+        >
           {securityFeatures.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -185,7 +198,7 @@ const SelfCustodySecurity = () => {
               transition={{ delay: index * 0.15 }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-5xl mb-4">{option.icon}</div>
+              <option.icon className="mx-auto mb-4 text-accent w-24 h-24" />
               <h3 className="text-xl font-semibold text-secondary mb-3">
                 {option.title}
               </h3>
