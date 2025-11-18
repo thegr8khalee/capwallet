@@ -80,11 +80,11 @@ const Support = () => {
   ];
 
   const community = [
-    { name: 'Telegram', icon: 'telegram.png' },
-    { name: 'Discord', icon: 'discord.png' },
-    { name: 'X (Twitter)', icon: 'x.png' },
-    { name: 'GitHub', icon: 'github.png' },
-    { name: 'YouTube', icon: 'youtube.png' },
+    { name: 'Telegram', icon: 'telegram.svg' },
+    { name: 'Discord', icon: 'discord.svg' },
+    { name: 'X (Twitter)', icon: 'x.svg' },
+    { name: 'GitHub', icon: 'github.svg' },
+    { name: 'YouTube', icon: 'youtube.svg' },
   ];
 
   const statusItems = [

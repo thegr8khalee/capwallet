@@ -61,9 +61,9 @@ const Header = ({ className = '' }) => {
         <div className="flex flex-col space-y-4 p-4">
           <a href="/ai-protection" className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
             <img
-              src="/featAI.png"
+              src="/featAI.svg"
               alt=""
-              className="aspect-square w-30 rounded-3xl"
+              className="aspect-square object-cover w-30 rounded-3xl"
             />
             <div className="flex flex-col justify-between h-full">
               <h3 className="text-base font-medium text-secondary">
@@ -76,9 +76,9 @@ const Header = ({ className = '' }) => {
           </a>
           <a href="/multi-chain" className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
             <img
-              src="/multichain1.jpg"
+              src="/multichain1.svg"
               alt=""
-              className="aspect-square w-30 rounded-3xl"
+              className="aspect-square object-cover w-30 rounded-3xl"
             />
             <div className="flex flex-col justify-between h-full">
               <h3 className="text-base font-medium text-secondary">
@@ -91,9 +91,9 @@ const Header = ({ className = '' }) => {
           </a>
           <a href="/self-custody" className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
             <img
-              src="/featcustody.png"
+              src="/featcustody.svg"
               alt=""
-              className="aspect-square w-30 rounded-3xl"
+              className="aspect-square object-cover w-30 rounded-3xl"
             />
             <div className="flex flex-col justify-between h-full">
               <h3 className="text-base font-medium text-secondary">
@@ -220,7 +220,7 @@ const Header = ({ className = '' }) => {
       <header className={`mx-4 relative top-4 z-100 ${className}`}>
         <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-none">
           <a href="/" className="flex justify-center items-center space-x-2">
-            <img src="/logo.webp" alt="" className="w-10" />
+            <img src="/logo.svg" alt="" className="w-10" />
             <div className="mb-1 font-montserrat text-xl font-bold text-primary pointer-events-auto">
               Cap Wallet
             </div>

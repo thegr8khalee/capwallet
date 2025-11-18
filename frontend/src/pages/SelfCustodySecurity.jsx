@@ -10,28 +10,28 @@ const SelfCustodySecurity = () => {
       description: 'Your keys are created directly on your device using cryptographically secure randomness.',
       bg: 'bg-primary',
       textColor: 'text-white',
-      img: 'local-keygen.png'
+      img: 'local-keygen.svg'
     },
     {
       title: 'End-to-End Encryption',
       description: 'If you use cloud backup, your keys are encrypted locally before upload—Cap Wallet never sees them.',
       bg: 'bg-accent',
       textColor: 'text-secondary',
-      img: 'encryption.png'
+      img: 'encryption.svg'
     },
     {
       title: 'No Server-Side Storage',
       description: 'We don\'t store your private keys, seed phrases, or passwords.',
       bg: 'bg-black',
       textColor: 'text-white',
-      img: 'serverless.png'
+      img: 'serverless.svg'
     },
     {
       title: 'Biometric Security',
       description: 'Face ID / Touch ID protect your local wallet from unauthorized access.',
       bg: 'bg-white',
       textColor: 'text-black',
-      img: 'biometric.png'
+      img: 'biometric.svg'
     },
   ];
 

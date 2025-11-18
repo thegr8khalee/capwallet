@@ -12,25 +12,25 @@ const Home = () => {
           text: 'AI Transaction Protection',
           bg: 'bg-primary',
           textColor: 'text-white',
-          img: '/AISec.png',
+          img: '/AISec.svg',
         },
         {
           text: 'Self-Custody Security',
           bg: 'bg-accent',
           textColor: 'text-white',
-          img: '/non-custodial.png',
+          img: '/non-custodial.svg',
         },
         {
           text: '24/7 Security Guard',
           bg: 'bg-black',
           textColor: 'text-white',
-          img: '/247.png',
+          img: '/247.svg',
         },
         {
           text: 'Multi-Signature & Shared Wallets',
           bg: 'bg-white',
           textColor: 'text-primary',
-          img: '/multiwallet.png',
+          img: '/multiwallet.svg',
         },
       ],
       bg: 'bg-primary',
@@ -42,37 +42,37 @@ const Home = () => {
           text: 'Multi-Chain Support',
           bg: 'bg-secondary',
           textColor: 'text-white',
-          img: '/multichain.png',
+          img: '/multichain.svg',
         },
         {
           text: 'Universal NFT Wallet',
           bg: 'bg-accent',
           textColor: 'text-white',
-          img: '/nft.png',
+          img: '/nft.svg',
         },
         {
           text: 'Integrated DEX Access',
           bg: 'bg-primary',
           textColor: 'text-white',
-          img: '/dex.png',
+          img: '/dex.svg',
         },
         {
           text: 'Cross-Chain Swaps & Bridges',
           bg: 'bg-secondary',
           textColor: 'text-white',
-          img: '/swap.png',
+          img: '/swap.svg',
         },
         {
           text: 'In-Wallet Token Swaps',
           bg: 'bg-accent',
           textColor: 'text-white',
-          img: '/in-wallet-swap.png',
+          img: '/in-wallet-swap.svg',
         },
         {
           text: 'Dark Pool Trading Access',
           bg: 'bg-primary',
           textColor: 'text-white',
-          img: '/darkpool.png',
+          img: '/darkpool.svg',
         },
       ],
       bg: 'bg-accent',
@@ -84,25 +84,25 @@ const Home = () => {
           text: 'Built-In dApp & DeFi Access',
           bg: 'bg-secondary',
           textColor: 'text-white',
-          img: '/defi.png',
+          img: '/defi.svg',
         },
         {
           text: 'Smart Portfolio Tips',
           bg: 'bg-accent',
           textColor: 'text-white',
-          img: '/tips.png',
+          img: '/tips.svg',
         },
         {
           text: 'Save on Fees',
           bg: 'bg-primary',
           textColor: 'text-white',
-          img: '/app.png',
+          img: '/app.svg',
         },
         {
           text: 'Integrated Crypto On/Off Ramp',
           bg: 'bg-secondary',
           textColor: 'text-white',
-          img: '/app.png',
+          img: '/app.svg',
         },
       ],
       bg: 'bg-secondary',
@@ -125,7 +125,7 @@ const Home = () => {
         >
           {/* Background decorative image */}
           <motion.img
-            src="/wave.webp"
+            src="/wave.svg"
             alt=""
             className="absolute right-[-50px] bottom-[-70px] w-[480px] lg:w-[580px] opacity-90 pointer-events-none select-none -z-0"
             animate={{
@@ -197,7 +197,7 @@ const Home = () => {
                 </motion.button> */}
               </motion.div>
             </div>
-            <img src="/card.png" alt="" className='z-101 w-40 sm:w-70 lg:w-100' />
+            <img src="/card.svg" alt="" className='z-101 w-40 sm:w-70 lg:w-100' />
           </div>
         </motion.div>
       </motion.section>
@@ -242,7 +242,7 @@ const Home = () => {
           </motion.button>
         </div>
         <motion.img
-          src="/app.png"
+          src="/app.svg"
           alt="App screenshot"
           className="w-40 md:w-60 rounded-3xl"
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}

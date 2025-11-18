@@ -10,42 +10,42 @@ const AITransactionProtection = () => {
       text: 'Scam or blacklisted addresses',
       bg: 'bg-red-500',
       textColor: 'text-white',
-      img: '/blacklisted.png',
+      img: '/blacklisted.svg',
     },
     {
       icon: '🛑',
       text: 'Malicious or risky smart contracts',
       bg: 'bg-yellow-500',
       textColor: 'text-white',
-      img: '/contract-analysis.png',
+      img: '/contract-analysis.svg',
     },
     {
       icon: '⚠️',
       text: 'Abnormal transaction patterns',
       bg: 'bg-white',
       textColor: 'text-secondary',
-      img: '/abnormal.png',
+      img: '/abnormal.svg',
     },
     {
       icon: '🧪',
       text: 'Fake or spoofed token contracts',
       bg: 'bg-accent',
       textColor: 'text-white',
-      img: '/fake-contract.png',
+      img: '/fake-contract.svg',
     },
     {
       icon: '🔗',
       text: 'Suspicious dApps or phishing sites',
       bg: 'bg-black',
       textColor: 'text-white',
-      img: '/dApps.png',
+      img: '/dApps.svg',
     },
     {
       icon: '💸',
       text: 'High-fee or front-running risks',
       bg: 'bg-primary',
       textColor: 'text-white',
-      img: '/high-gas-fee.png',
+      img: '/high-gas-fee.svg',
     },
   ];
 
@@ -54,33 +54,33 @@ const AITransactionProtection = () => {
       number: '1',
       title: 'AI Risk Scan',
       description: 'Every transaction is analyzed for fraud signals.',
-      img: '/AI-scan.png',
+      img: '/AI-scan.svg',
     },
     {
       number: '2',
       title: 'Safety Summary',
       description: "You get a clear explanation of what's risky and why.",
-      img: '/AI-summary.png',
+      img: '/AI-summary.svg',
     },
     {
       number: '3',
       title: 'Smart Recommendations',
       description:
         'AI suggests safer options—like lower-fee routes or verified addresses.',
-      img: '/AI-recommendations.png',
+      img: '/AI-recommendations.svg',
     },
     {
       number: '4',
       title: 'User Approval',
       description: 'No transaction executes without your confirmation.',
-      img: '/AI-approval.png',
+      img: '/AI-approval.svg',
     },
     {
       number: '5',
       title: 'Continuous Monitoring',
       description:
         'AI learns from each interaction to keep improving your protection.',
-      img: '/AI-continious.png',
+      img: '/AI-continious.svg',
     },
   ];
 

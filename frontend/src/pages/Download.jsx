@@ -8,7 +8,7 @@ const DownloadPage = () => {
   const mobileDownloads = [
     {
       os: 'iOS',
-      icon: 'ios.png',
+      icon: 'ios.svg',
       description: 'iPhone & iPad',
       link: '#',
       version: 'v2.1.0',
@@ -16,7 +16,7 @@ const DownloadPage = () => {
     },
     {
       os: 'Android',
-      icon: 'android.png',
+      icon: 'android.svg',
       description: 'Google Play',
       link: '#',
       version: 'v2.1.0',
@@ -24,7 +24,7 @@ const DownloadPage = () => {
     },
     {
       os: 'Android APK',
-      icon: 'android.png',
+      icon: 'android.svg',
       description: 'Direct Download',
       link: '#',
       version: 'v2.1.0',
@@ -35,7 +35,7 @@ const DownloadPage = () => {
   const browserExtensions = [
     {
       browser: 'Chrome',
-      icon: 'chrome.png',
+      icon: 'chrome.svg',
       description: 'Chrome Web Store',
       link: '#',
       version: 'v2.1.0',
@@ -43,7 +43,7 @@ const DownloadPage = () => {
     },
     {
       browser: 'Firefox',
-      icon: 'firefox.png',
+      icon: 'firefox.svg',
       description: 'Firefox Add-ons',
       link: '#',
       version: 'v2.1.0',
@@ -51,7 +51,7 @@ const DownloadPage = () => {
     },
     {
       browser: 'Edge',
-      icon: 'edge.png',
+      icon: 'edge.svg',
       description: 'Microsoft Edge Add-ons',
       link: '#',
       version: 'v2.1.0',
@@ -59,7 +59,7 @@ const DownloadPage = () => {
     },
     {
       browser: 'Brave',
-      icon: 'brave.png',
+      icon: 'brave.svg',
       description: 'Chrome Web Store Compatible',
       link: '#',
       version: 'v2.1.0',
@@ -67,7 +67,7 @@ const DownloadPage = () => {
     },
     {
       browser: 'Opera',
-      icon: 'opera.png',
+      icon: 'opera.svg',
       description: 'Opera Add-ons',
       link: '#',
       version: 'v2.1.0',
@@ -75,7 +75,7 @@ const DownloadPage = () => {
     },
     {
       browser: 'Safari',
-      icon: 'safari.png',
+      icon: 'safari.svg',
       description: 'Coming Soon',
       link: '#',
       version: 'Coming Soon',
@@ -87,7 +87,7 @@ const DownloadPage = () => {
   const desktopApps = [
     {
       os: 'Windows',
-      icon: 'windows.png',
+      icon: 'windows.svg',
       description: 'Windows 10/11',
       link: '#',
       version: 'v2.1.0',
@@ -95,7 +95,7 @@ const DownloadPage = () => {
     },
     {
       os: 'macOS',
-      icon: 'ios.png',
+      icon: 'ios.svg',
       description: 'macOS 11.0+',
       link: '#',
       version: 'v2.1.0',
@@ -103,7 +103,7 @@ const DownloadPage = () => {
     },
     {
       os: 'Linux',
-      icon: 'linux.png',
+      icon: 'linux.svg',
       description: 'Ubuntu, Debian, Fedora',
       link: '#',
       version: 'v2.1.0',
@@ -245,14 +245,14 @@ const DownloadPage = () => {
           {/* Quick Download Badges */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#" className="flex justify-center bg-black items-center text-white rounded-xl px-4 py-3 hover:opacity-90 transition duration-200">
-              <img src="/playstore.png" alt="Get it on Google Play" className="w-10 h-10 mr-3" />
+              <img src="/playstore.svg" alt="Get it on Google Play" className="w-10 h-10 mr-3" />
               <div className="flex flex-col text-start">
                 <p className="text-xs">Get it on</p>
                 <h3 className="text-xl font-medium">Google Play</h3>
               </div>
             </a>
             <a href="#" className="flex justify-center bg-black items-center text-white rounded-xl px-4 py-3 hover:opacity-90 transition duration-200">
-              <img src="/appstore.png" alt="Download on the App Store" className="w-10 h-10 mr-3" />
+              <img src="/appstore.svg" alt="Download on the App Store" className="w-10 h-10 mr-3" />
               <div className="flex flex-col text-start">
                 <p className="text-xs">Download on the</p>
                 <h3 className="text-xl font-medium">App Store</h3>

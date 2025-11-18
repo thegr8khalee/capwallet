@@ -5,11 +5,11 @@ import FeatureCard from '../components/FeatureCard';
 
 const MultiChain = () => {
   const coreChains = [
-    { name: 'Bitcoin', logo: 'btc.png' },
-    { name: 'Solana', logo: 'sol.png' },
-    { name: 'Ethereum', logo: 'eth.png' },
-    { name: 'Binance Smart Chain', logo: 'bnb.png' },
-    { name: 'Polygon', logo: 'polygon.png' },
+    { name: 'Bitcoin', logo: 'btc.svg' },
+    { name: 'Solana', logo: 'sol.svg' },
+    { name: 'Ethereum', logo: 'eth.svg' },
+    { name: 'Binance Smart Chain', logo: 'bnb.svg' },
+    { name: 'Polygon', logo: 'polygon.svg' },
   ];
 
   const upcomingChains = [
@@ -226,7 +226,7 @@ const MultiChain = () => {
               feature={benefit}
               bg="bg-white"
               textColor="text-gray-900"
-              img={`/app.png`}
+              img={`/app.svg`}
             />
           ))}
         </div>

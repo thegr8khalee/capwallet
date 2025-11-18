@@ -16,7 +16,7 @@ const Footer = () => {
           {/* A. Logo and Newsletter Section */}
           <div className="w-full lg:w-1/3 mb-10 lg:mb-0">
             <div className="flex justify-start items-center space-x-2 mb-6">
-              <img src="/logo.webp" alt="" className="h-10 w-10" />
+              <img src="/logo.svg" alt="" className="h-10 w-10" />
               <h1 className="text-xl font-bold text-primary mb-1">
                 Cap Wallet
               </h1>
@@ -171,7 +171,7 @@ const Footer = () => {
               {/** Play Store Badge */}
               <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
                 <img
-                  src="/playstore.png"
+                  src="/playstore.svg"
                   alt="Get it on Google Play"
                   className="w-8 h-8 mr-2"
                 />
@@ -184,7 +184,7 @@ const Footer = () => {
               {/** App Store Badge */}
               <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
                 <img
-                  src="/appstore.png"
+                  src="/appstore.svg"
                   alt="Get it on the App Store"
                   className="w-8 h-8 mr-2"
                 />
