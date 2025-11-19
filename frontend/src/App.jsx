@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import ScrollToTop from './components/ScrollToTop';
 import { Route, Router, Routes } from 'react-router-dom';
@@ -17,18 +17,18 @@ import Download from './pages/Download';
 
 
 function App() {
-  
+  const [pageLoading, setPageLoading] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen bg-[var(--color-background)] text-[var(--color-text)]">
       <ScrollToTop />
-      <Header />
+      {!pageLoading && <Header />}
       <main className="">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ai-protection" element={<AITransactionProtection />} />
-          <Route path="/multi-chain" element={<MultiChain />} />
-          <Route path="/self-custody" element={<SelfCustodySecurity />} />
+          <Route path="/" element={<Home setPageLoading={setPageLoading} />} />
+          <Route path="/ai-protection" element={<AITransactionProtection setPageLoading={setPageLoading} />} />
+          <Route path="/multi-chain" element={<MultiChain setPageLoading={setPageLoading} />} />
+          <Route path="/self-custody" element={<SelfCustodySecurity setPageLoading={setPageLoading} />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path='/support' element={<Support />} />

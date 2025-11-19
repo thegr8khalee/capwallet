@@ -1,9 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
+import LoadingScreen from '../components/LoadingScreen';
+import { useImagePreloader } from '../hooks/useImagePreloader';
 
-const MultiChain = () => {
+const MultiChain = ({ setPageLoading }) => {
   const coreChains = [
     { name: 'Bitcoin', logo: 'btc.svg' },
     { name: 'Solana', logo: 'sol.svg' },
@@ -65,9 +67,25 @@ const MultiChain = () => {
     },
   ];
 
+  const imageUrls = [
+    ...coreChains.map(chain => `/${chain.logo}`),
+    '/app.svg'
+  ];
+  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
+
+  useEffect(() => {
+    if (setPageLoading) {
+      setPageLoading(!imagesLoaded);
+    }
+  }, [imagesLoaded, setPageLoading]);
+
   return (
-    <div className="pt-24">
-      {/* Hero Section */}
+    <>
+      <AnimatePresence>
+        {!imagesLoaded && <LoadingScreen progress={progress} />}
+      </AnimatePresence>
+      {imagesLoaded && (
+    <div className="pt-24">{/*Hero Section */}
       <motion.section
         className="px-6 max-w-6xl mx-auto min-h-[600px] flex flex-col justify-center items-center text-center"
         initial={{ opacity: 0, y: 50 }}
@@ -340,6 +358,8 @@ const MultiChain = () => {
         </motion.button>
       </motion.section>
     </div>
+    )}
+    </>
   );
 };
 

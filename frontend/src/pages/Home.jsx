@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
 import LoadingScreen from '../components/LoadingScreen';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
-const Home = () => {
+const Home = ({ setPageLoading }) => {
   const features = [
     {
       hero: 'Your Crypto, Protected by Intelligent Security',
@@ -120,6 +120,12 @@ const Home = () => {
   ];
 
   const { imagesLoaded, progress } = useImagePreloader(imageUrls);
+
+  useEffect(() => {
+    if (setPageLoading) {
+      setPageLoading(!imagesLoaded);
+    }
+  }, [imagesLoaded, setPageLoading]);
 
   return (
     <>

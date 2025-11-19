@@ -1,10 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
+import LoadingScreen from '../components/LoadingScreen';
+import { useImagePreloader } from '../hooks/useImagePreloader';
 import { PenIcon, CloudIcon, LockIcon } from 'lucide-react';
 
-const SelfCustodySecurity = () => {
+const SelfCustodySecurity = ({ setPageLoading }) => {
   const securityFeatures = [
     {
       title: 'Local Private Key Generation',
@@ -91,9 +93,22 @@ const SelfCustodySecurity = () => {
     },
   ];
 
+  const imageUrls = securityFeatures.map(f => `/${f.img}`);
+  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
+
+  useEffect(() => {
+    if (setPageLoading) {
+      setPageLoading(!imagesLoaded);
+    }
+  }, [imagesLoaded, setPageLoading]);
+
   return (
-    <div className="pt-24">
-      {/* Hero Section */}
+    <>
+      <AnimatePresence>
+        {!imagesLoaded && <LoadingScreen progress={progress} />}
+      </AnimatePresence>
+      {imagesLoaded && (
+    <div className="pt-24">{/* Hero Section */}
       <motion.section
         className="px-6 max-w-6xl mx-auto min-h-[600px] flex flex-col justify-center items-center text-center"
         initial={{ opacity: 0, y: 50 }}
@@ -314,6 +329,8 @@ const SelfCustodySecurity = () => {
         </motion.button>
       </motion.section>
     </div>
+    )}
+    </>
   );
 };
 

@@ -158,14 +158,14 @@ const DownloadPage = () => {
 
         {/* Platform Selector */}
         <motion.div
-          className="flex gap-4 mb-8"
+          className="flex flex-col sm:flex-row w-full gap-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
           <button
             onClick={() => setSelectedPlatform('mobile')}
-            className={`px-8 py-4 rounded-full font-semibold transition-all ${
+            className={`flex justify-center items-center text-sm px-8 py-4 rounded-full font-semibold transition-all ${
               selectedPlatform === 'mobile'
                 ? 'bg-accent text-white'
                 : 'bg-white text-secondary border border-gray-300 hover:border-accent'
@@ -176,7 +176,7 @@ const DownloadPage = () => {
           </button>
           <button
             onClick={() => setSelectedPlatform('browser')}
-            className={`px-8 py-4 rounded-full font-semibold transition-all ${
+            className={`flex justify-center items-center text-sm px-8 py-4 rounded-full font-semibold transition-all ${
               selectedPlatform === 'browser'
                 ? 'bg-accent text-white'
                 : 'bg-white text-secondary border border-gray-300 hover:border-accent'
@@ -187,7 +187,7 @@ const DownloadPage = () => {
           </button>
           <button
             onClick={() => setSelectedPlatform('desktop')}
-            className={`px-8 py-4 rounded-full font-semibold transition-all ${
+            className={`flex justify-center items-center text-sm px-8 py-4 rounded-full font-semibold transition-all ${
               selectedPlatform === 'desktop'
                 ? 'bg-accent text-white'
                 : 'bg-white text-secondary border border-gray-300 hover:border-accent'
