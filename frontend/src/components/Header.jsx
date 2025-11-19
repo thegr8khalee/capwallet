@@ -12,6 +12,24 @@ import {
 import PhoneIcon from './Phone';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Preload critical header assets
+const preloadHeaderAssets = () => {
+  const criticalAssets = [
+    '/logo.svg',
+    '/AISec.svg',
+    '/multichain.svg',
+    '/non-custodial.svg',
+  ];
+
+  criticalAssets.forEach(src => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+};
+
 const Header = ({ className = '' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -19,6 +37,11 @@ const Header = ({ className = '' }) => {
   const [dropdownPos, setDropdownPos] = useState(null);
   const [activeModalTab, setActiveModalTab] = useState(null);
   const buttonRefs = useRef({});
+
+  // Preload header assets on mount
+  useEffect(() => {
+    preloadHeaderAssets();
+  }, []);
   const dropdownRef = useRef(null);
   const closeTimeoutRef = useRef(null);
 

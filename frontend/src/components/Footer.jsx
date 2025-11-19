@@ -11,17 +11,14 @@ const Footer = () => {
     <footer className="p-6 text-primary">
       {/* 2. Main Content Container: Max width for better desktop readability, rounded corners for style. */}
       <div className="bg-white rounded-3xl p-6 ">
+        <div className="flex justify-start items-center space-x-2 mb-6">
+          <img src="/logo.svg" alt="" className="h-10 w-10" />
+          <h1 className="text-xl font-bold text-primary mb-1">Cap Wallet</h1>
+        </div>
         {/* Top Section: Logo/Newsletter and Nav Links */}
         <div className="flex flex-col lg:flex-row justify-">
           {/* A. Logo and Newsletter Section */}
           <div className="w-full lg:w-1/3 mb-10 lg:mb-0">
-            <div className="flex justify-start items-center space-x-2 mb-6">
-              <img src="/logo.svg" alt="" className="h-10 w-10" />
-              <h1 className="text-xl font-bold text-primary mb-1">
-                Cap Wallet
-              </h1>
-            </div>
-
             {/* Newsletter Box */}
             <div className="bg-accent p-6 rounded-3xl text-white">
               <h2 className="text-3xl font-semibold mb-2">
@@ -175,9 +172,9 @@ const Footer = () => {
                   alt="Get it on Google Play"
                   className="w-8 h-8 mr-2"
                 />
-                <div className='flex flex-col text-start -space-y-1'>
-                  <p className='text-xs'>Get it on</p>
-                  <h3 className='text-lg font-medium'>Google Play</h3>
+                <div className="flex flex-col text-start -space-y-1">
+                  <p className="text-xs">Get it on</p>
+                  <h3 className="text-lg font-medium">Google Play</h3>
                 </div>
               </button>
 
@@ -188,9 +185,9 @@ const Footer = () => {
                   alt="Get it on the App Store"
                   className="w-8 h-8 mr-2"
                 />
-                <div className='flex flex-col text-start -space-y-1'>
-                  <p className='text-xs'>Get it on</p>
-                  <h3 className='text-lg font-medium'>App Store</h3>
+                <div className="flex flex-col text-start -space-y-1">
+                  <p className="text-xs">Get it on</p>
+                  <h3 className="text-lg font-medium">App Store</h3>
                 </div>
               </button>
             </div>

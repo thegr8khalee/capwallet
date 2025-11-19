@@ -1,7 +1,9 @@
 import React from 'react';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
-import { motion } from 'framer-motion';
+import LoadingScreen from '../components/LoadingScreen';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useImagePreloader } from '../hooks/useImagePreloader';
 
 const Home = () => {
   const features = [
@@ -109,8 +111,24 @@ const Home = () => {
     },
   ];
 
+  // Collect all image URLs for preloading
+  const imageUrls = [
+    ...features.flatMap(section => section.features.map(f => f.img)),
+    '/wave.svg',
+    '/card.svg',
+    '/app.svg',
+  ];
+
+  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
+
   return (
-    <div className="pt-24">
+    <>
+      <AnimatePresence>
+        {!imagesLoaded && <LoadingScreen progress={progress} />}
+      </AnimatePresence>
+      
+      <div className="pt-24">{imagesLoaded && (
+        <>
       <motion.section
         id="hero"
         className="px-4 sm:px-6 h-screen flex flex-col justify-between items-start z-10"
@@ -411,7 +429,9 @@ const Home = () => {
           </motion.button>
         </div>
       </motion.section>
+      </>)}
     </div>
+    </>
   );
 };
 

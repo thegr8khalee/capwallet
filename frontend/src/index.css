@@ -14,6 +14,11 @@
   --color-background: #F4F5FF;
 }
 
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
   --font-body: 'Montserrat', sans-serif;
   --font-body-size: 16px;
@@ -23,6 +28,10 @@
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-pill: 9999px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-primary {
