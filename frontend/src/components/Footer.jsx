@@ -8,9 +8,9 @@ import React from 'react';
 const Footer = () => {
   return (
     // 1. Footer: Set padding and a distinct top border/shadow if desired.
-    <footer className="p-6 text-primary">
+    <footer className="p-4 text-primary">
       {/* 2. Main Content Container: Max width for better desktop readability, rounded corners for style. */}
-      <div className="bg-white rounded-3xl p-6 ">
+      <div className="bg-white rounded-3xl p-4 sm:p-6 ">
         <div className="flex justify-start items-center space-x-2 mb-6">
           <img src="/logo.svg" alt="" className="h-10 w-10" />
           <h1 className="text-xl font-bold text-primary mb-1">Cap Wallet</h1>

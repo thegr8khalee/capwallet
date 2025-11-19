@@ -6,7 +6,7 @@ import PhoneIcon from '../components/Phone';
 const About = () => {
   const values = [
     {
-      icon: <Lock className="size-10 text-primary" />,
+      icon: <Lock className="size-10 text-accent" />,
       title: 'Self-Custody First',
       description:
         'Your keys, your crypto. Always. Private keys never leave your device.',
@@ -18,7 +18,7 @@ const About = () => {
         'AI works behind the scenes to flag risks, warn you about malicious activity, and optimize your transactions.',
     },
     {
-      icon: <Globe className="size-10 text-primary" />,
+      icon: <Globe className="size-10 text-accent" />,
       title: 'Multi-Chain Freedom',
       description:
         'One wallet for Bitcoin, Solana, Ethereum, BSC, Polygon, and dozens more chains.',
@@ -30,7 +30,7 @@ const About = () => {
         'Crypto should be simple, secure, and fast—not overwhelming.',
     },
     {
-      icon: <Shield className="size-10 text-primary" />,
+      icon: <Shield className="size-10 text-accent" />,
       title: 'Protection for Everyone',
       description:
         'We make institutional-grade security accessible to everyday users.',
@@ -259,7 +259,7 @@ const About = () => {
       </motion.section>
 
       {/* Join Us */}
-      <motion.section
+      {/* <motion.section
         className="px-6 max-w-6xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -283,7 +283,7 @@ const About = () => {
             View Careers
           </motion.button>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Press & Media */}
       <motion.section

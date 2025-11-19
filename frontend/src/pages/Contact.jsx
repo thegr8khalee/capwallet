@@ -219,12 +219,12 @@ const Contact = () => {
 
       {/* Contact Form */}
       <motion.section
-        className="px-6 max-w-4xl mx-auto py-20"
+        className="px-4 sm:px-6 max-w-4xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-200">
+        <div className="bg-white rounded-3xl p-4 sm:p-8 py-8 md:p-12 border border-gray-200">
           <h2 className="text-4xl font-montserrat font-bold text-secondary mb-8 text-center">
             Send Us a Message
           </h2>

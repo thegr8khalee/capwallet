@@ -207,12 +207,12 @@ const Support = () => {
 
       {/* Contact Support */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
+        className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-accent/10 rounded-3xl p-8 md:p-12">
+        <div className="bg-accent/10 rounded-3xl p-4 py-8 md:p-12">
           <div className="flex items-center gap-3 mb-6">
             <MessageCircle className="text-accent size-10" />
             <h2 className="text-4xl font-montserrat font-bold text-secondary">
@@ -248,12 +248,12 @@ const Support = () => {
 
       {/* Security & Fraud */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
+        className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-red-50 rounded-3xl p-8 md:p-12 border border-red-200">
+        <div className="bg-red-50 rounded-3xl p-4 sm:p-8 py-8 md:p-12 border border-red-200">
           <div className="flex items-center gap-3 mb-6">
             <Shield className="text-red-600 size-10" />
             <h2 className="text-4xl font-montserrat font-bold text-secondary">
@@ -290,12 +290,12 @@ const Support = () => {
 
       {/* Developer Support */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
+        className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-primary/10 rounded-3xl p-8 md:p-12">
+        <div className="bg-primary/10 rounded-3xl p-4 py-8 md:p-12">
           <div className="flex items-center gap-3 mb-6">
             <Code className="text-primary size-10" />
             <h2 className="text-4xl font-montserrat font-bold text-secondary">
@@ -366,12 +366,12 @@ const Support = () => {
 
       {/* Status & Updates */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
+        className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+        <div className="bg-gray-50 rounded-3xl p-4 sm:p-8 py-8 md:p-12">
           <div className="flex items-center gap-3 mb-6">
             <Activity className="text-green-600 size-10" />
             <h2 className="text-4xl font-montserrat font-bold text-secondary">
