@@ -158,7 +158,7 @@ const DownloadPage = () => {
 
         {/* Platform Selector */}
         <motion.div
-          className="flex flex-col sm:flex-row w-full gap-4 mb-8"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-center w-full gap-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
