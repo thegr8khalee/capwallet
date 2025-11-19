@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <Shield className="text-accent size-20" />
+          <Shield className="text-primary size-20" />
         </motion.div>
         <motion.h1
           className="text-5xl md:text-6xl font-montserrat font-bold text-secondary mb-4"

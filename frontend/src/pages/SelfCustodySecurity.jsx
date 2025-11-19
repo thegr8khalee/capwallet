@@ -213,7 +213,7 @@ const SelfCustodySecurity = ({ setPageLoading }) => {
               transition={{ delay: index * 0.15 }}
               whileHover={{ scale: 1.05 }}
             >
-              <option.icon className="mx-auto mb-4 text-accent w-24 h-24" />
+              <option.icon className="mx-auto mb-4 text-primary w-24 h-24" />
               <h3 className="text-xl font-semibold text-secondary mb-3">
                 {option.title}
               </h3>

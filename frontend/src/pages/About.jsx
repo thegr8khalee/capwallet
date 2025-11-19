@@ -70,7 +70,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <InfoIcon className="size-20 text-accent" />
+          <InfoIcon className="size-20 text-primary" />
         </motion.div>
         <motion.h1
           className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold text-secondary mb-6"

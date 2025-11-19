@@ -135,7 +135,7 @@ const DownloadPage = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <Download className="size-20 text-accent mx-auto" />
+          <Download className="size-20 text-primary mx-auto" />
         </motion.div>
         <motion.h1
           className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold text-secondary mb-6"
