@@ -218,7 +218,7 @@ const Contact = () => {
       </motion.section>
 
       {/* Contact Form */}
-      <motion.section
+      {/* <motion.section
         className="px-4 sm:px-6 max-w-4xl mx-auto py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -287,7 +287,7 @@ const Contact = () => {
             </motion.button>
           </form>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* CTA */}
       <motion.section

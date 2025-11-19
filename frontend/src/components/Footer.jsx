@@ -18,35 +18,10 @@ const Footer = () => {
         {/* Top Section: Logo/Newsletter and Nav Links */}
         <div className="flex flex-col lg:flex-row justify-">
           {/* A. Logo and Newsletter Section */}
-          <div className="w-full lg:w-1/3 mb-10 lg:mb-0">
-            {/* Newsletter Box */}
-            <div className="bg-accent p-6 rounded-3xl text-white">
-              <h2 className="text-3xl font-semibold mb-2">
-                Join Our Community
-              </h2>
-              <p className="text-sm  mb-4">
-                Sign up for our newsletter and join the growing CapWallet
-                community.
-              </p>
-
-              <div className="flex flex-col gap-3">
-                <div className="w-full flex p-1 pl-4 rounded-full text-secondary placeholder:text-gray-400 border border-gray-200 focus:border-blue-400 focus:outline-none transition duration-150">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    // Refined input styling: full width, better padding, focus state.
-                    className="w-full focus:border-blue-400 focus:outline-none transition duration-150"
-                  />
-                  <button className="btn bg-white border-0 shadow-none text-accent font-medium p-6 rounded-full transition duration-150">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           {/* B. Navigation Links Grid */}
-          <div className="flex flex-col space-y-8 w-full lg:w-2/3 ">
+          <div className="flex flex-col space-y-8 w-full">
             <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 lg:pl-16">
               {/* 1. Features */}
               <div>
