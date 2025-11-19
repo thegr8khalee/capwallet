@@ -152,8 +152,6 @@ const DownloadPage = () => {
           transition={{ delay: 0.4 }}
         >
           Get started with the most secure, intelligent crypto wallet.
-          <br />
-          Available on mobile, desktop, and browser.
         </motion.p>
 
         {/* Platform Selector */}
