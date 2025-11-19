@@ -244,7 +244,7 @@ const Header = ({ className = '' }) => {
         <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-none">
           <a href="/" className="flex justify-center items-center space-x-2">
             <img src="/logo.svg" alt="" className="w-10" />
-            <div className="mb-1 font-montserrat text-xl font-bold text-primary pointer-events-auto">
+            <div className=" font-montserrat text-xl font-bold text-primary pointer-events-auto">
               Cap Wallet
             </div>
           </a>
