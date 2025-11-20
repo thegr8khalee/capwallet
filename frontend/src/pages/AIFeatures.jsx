@@ -94,7 +94,10 @@ const AIFeatures = ({ setPageLoading }) => {
     'Anyone connecting to unknown dApps',
   ];
 
-  const imageUrls = benefits.map(b => b.img);
+  const imageUrls = [
+    ...benefits.map(b => b.img),
+    ...steps.map(s => s.img)
+  ];
   const { imagesLoaded, progress } = useImagePreloader(imageUrls);
 
   useEffect(() => {

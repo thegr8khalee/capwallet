@@ -76,6 +76,7 @@ const WalletFeatures = ({ setPageLoading }) => {
 
   const imageUrls = [
     ...coreChains.map((chain) => `/${chain.logo}`),
+    ...features[0].features.map(f => f.img),
     '/app.svg',
   ];
   const { imagesLoaded, progress } = useImagePreloader(imageUrls);

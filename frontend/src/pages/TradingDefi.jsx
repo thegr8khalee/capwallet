@@ -210,7 +210,10 @@ const TradingDeFi = ({ setPageLoading }) => {
     },
   ];
 
-  const imageUrls = securityFeatures.map((f) => `/${f.img}`);
+  const imageUrls = [
+    ...securityFeatures.map((f) => `/${f.img}`),
+    ...features[1].features.map(f => f.img)
+  ];
   const { imagesLoaded, progress } = useImagePreloader(imageUrls);
 
   useEffect(() => {
