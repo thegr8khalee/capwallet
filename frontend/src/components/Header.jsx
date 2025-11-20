@@ -1,8 +1,11 @@
 import React, { useCallback, useRef, useState, useEffect } from 'react';
 import {
+  BookOpen,
+  Briefcase,
   ChevronDown,
   ChevronRight,
   Heart,
+  InfoIcon,
   MenuIcon,
   PlayIcon,
   ScrollText,
@@ -21,7 +24,7 @@ const preloadHeaderAssets = () => {
     '/non-custodial.svg',
   ];
 
-  criticalAssets.forEach(src => {
+  criticalAssets.forEach((src) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
@@ -82,7 +85,28 @@ const Header = ({ className = '' }) => {
       key: 'features',
       items: () => (
         <div className="flex flex-col space-y-4 p-4">
-          <a href="/ai-protection" className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
+          <a
+            href="/wallet-features"
+            className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
+            <img
+              src="/card.svg"
+              alt=""
+              className="aspect-square object-covr w-30 rounded-3xl bg-white"
+            />
+            <div className="flex flex-col justify-between h-full">
+              <h3 className="text-base font-medium text-secondary">
+                Wallet Features
+              </h3>
+              <p className="text-sm text-gray-500">
+                Everything you need. All in one intelligent wallet.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/ai-features"
+            className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
             <img
               src="/featAI.svg"
               alt=""
@@ -90,41 +114,29 @@ const Header = ({ className = '' }) => {
             />
             <div className="flex flex-col justify-between h-full">
               <h3 className="text-base font-medium text-secondary">
-                AI Transaction Protection
+                AI Features
               </h3>
               <p className="text-sm text-gray-500">
-                Your Crypto, Protected by Intelligent Security
+                Intelligence that protects your every move.
               </p>
             </div>
           </a>
-          <a href="/multi-chain" className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
+          <a
+            href="/trading-defi"
+            className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
             <img
-              src="/multichain1.svg"
+              src="/trading-defi.svg"
               alt=""
               className="aspect-square object-cover w-30 rounded-3xl"
             />
             <div className="flex flex-col justify-between h-full">
               <h3 className="text-base font-medium text-secondary">
-                Multi-Chain Support
-              </h3>
-              <p className="text-sm text-gray-500">
-                One Wallet for Everything Across Every Chain
-              </p>
-            </div>
-          </a>
-          <a href="/self-custody" className="h-full flex items-start gap-3 bg-accent/20 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
-            <img
-              src="/featcustody.svg"
-              alt=""
-              className="aspect-square object-cover w-30 rounded-3xl"
-            />
-            <div className="flex flex-col justify-between h-full">
-              <h3 className="text-base font-medium text-secondary">
-                Self-Custody Security
+                Trading & DeFi
               </h3>
 
               <p className="text-sm text-gray-500">
-                Your private keys never leave your device—ever
+                Trade smarter. Explore DeFi effortlessly.
               </p>
             </div>
           </a>
@@ -132,16 +144,74 @@ const Header = ({ className = '' }) => {
       ),
     },
     {
+      label: 'Company',
+      key: 'company',
+      items: () => (
+        <div className="flex flex-col space-y-4 p-4">
+          {/* About Us */}
+          <a
+            href="/about"
+            className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
+            <div className="p-2 bg-primary/10 rounded-full flex items-center justify-center">
+              <InfoIcon className="text-primary size-6" />
+            </div>
+            <div>
+              <h3 className="text-base font-medium text-secondary">About Us</h3>
+              <p className="text-sm text-gray-500">
+                Learn more about Cap Wallet’s mission and team
+              </p>
+            </div>
+          </a>
+
+          {/* Careers */}
+          <a
+            href="/careers"
+            className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
+            <div className="p-2 bg-primary/10 rounded-full flex items-center justify-center">
+              <Briefcase className="text-primary size-6" />
+            </div>
+            <div>
+              <h3 className="text-base font-medium text-secondary">Careers</h3>
+              <p className="text-sm text-gray-500">
+                Join us and build the future of intelligent self-custody
+              </p>
+            </div>
+          </a>
+
+          {/* Blog */}
+          <a
+            href="/blogs"
+            className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
+            <div className="p-2 bg-primary/10 rounded-full flex items-center justify-center">
+              <BookOpen className="text-primary size-6" />
+            </div>
+            <div>
+              <h3 className="text-base font-medium text-secondary">Blog</h3>
+              <p className="text-sm text-gray-500">
+                Insights, updates, and security guides
+              </p>
+            </div>
+          </a>
+        </div>
+      ),
+    },
+
+    {
       label: 'Resources',
       key: 'resources',
       items: () => (
         <div className="flex flex-col space-y-4 p-4">
-          <a href="/support" className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
+          <a
+            href="/support"
+            className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
               <Heart className="text-primary" />
             </div>
-            <div>
-            </div>
+            <div></div>
             <div>
               <h3 className="text-base font-medium text-secondary">Support</h3>
               <p className="text-sm text-gray-500">
@@ -149,12 +219,14 @@ const Header = ({ className = '' }) => {
               </p>
             </div>
           </a>
-          <a href="/terms-of-service" className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
+          <a
+            href="/terms-of-service"
+            className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-             <ScrollText className="text-primary" />
+              <ScrollText className="text-primary" />
             </div>
-            <div>
-            </div>
+            <div></div>
             <div>
               <h3 className="text-base font-medium text-secondary">
                 Terms of Service
@@ -164,7 +236,10 @@ const Header = ({ className = '' }) => {
               </p>
             </div>
           </a>
-          <a href="/privacy-policy" className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer">
+          <a
+            href="/privacy-policy"
+            className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
+          >
             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
               <Smartphone className="text-primary" />
             </div>
@@ -181,15 +256,10 @@ const Header = ({ className = '' }) => {
       ),
     },
     {
-      label: 'About Us',
-      key: 'aboutus',
-      href: '/about',
-    },
-    {
       label: 'Contact',
       key: 'contact',
       href: '/contact',
-    }
+    },
   ];
 
   const clearCloseTimeout = () => {
@@ -251,7 +321,7 @@ const Header = ({ className = '' }) => {
 
           <div className="flex space-x-2 items-center justify-center pointer-events-auto">
             <a href="/download" className="btn p-6 btn-primary">
-              <PhoneIcon />
+              {/* <PhoneIcon /> */}
               Download
             </a>
             <button
@@ -276,7 +346,7 @@ const Header = ({ className = '' }) => {
           <div className="w-full flex items-center justify-between px-1 py-1 relative">
             <div className="w-full flex items-center justify-between gap-2 relative z-50">
               <nav className="w-full flex items-center justify-between  space-x-2 relative">
-                {menuItems.map((menu) => (
+                {menuItems.map((menu) =>
                   menu.href ? (
                     <a
                       key={menu.key}
@@ -308,7 +378,7 @@ const Header = ({ className = '' }) => {
                       )}
                     </button>
                   )
-                ))}
+                )}
               </nav>
             </div>
           </div>
@@ -320,23 +390,25 @@ const Header = ({ className = '' }) => {
           ></div>
         </div>
 
-        {hoveredDropdown && dropdownPos && menuItems.find((m) => m.key === hoveredDropdown)?.items && (
-          <div
-            ref={dropdownRef}
-            onMouseEnter={handleDropdownMouseEnter}
-            onMouseLeave={handleDesktopMouseLeave}
-            style={{
-              position: 'fixed',
-              top: dropdownPos.top,
-              left: dropdownPos.left,
-              transform: 'translateX(-50%)',
-              zIndex: 60,
-            }}
-            className="bg-white rounded-4xl min-w-[280px] animate-in fade-in slide-in-from-top-2 duration-200 shadow-xl border border-gray-100"
-          >
-            {menuItems.find((m) => m.key === hoveredDropdown)?.items()}
-          </div>
-        )}
+        {hoveredDropdown &&
+          dropdownPos &&
+          menuItems.find((m) => m.key === hoveredDropdown)?.items && (
+            <div
+              ref={dropdownRef}
+              onMouseEnter={handleDropdownMouseEnter}
+              onMouseLeave={handleDesktopMouseLeave}
+              style={{
+                position: 'fixed',
+                top: dropdownPos.top,
+                left: dropdownPos.left,
+                transform: 'translateX(-50%)',
+                zIndex: 60,
+              }}
+              className="bg-white rounded-4xl min-w-[280px] animate-in fade-in slide-in-from-top-2 duration-200 shadow-xl border border-gray-100"
+            >
+              {menuItems.find((m) => m.key === hoveredDropdown)?.items()}
+            </div>
+          )}
 
         {/* Mobile Menu Modal - Slide in from left */}
         <AnimatePresence>
@@ -371,7 +443,7 @@ const Header = ({ className = '' }) => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.1 }}
                   >
-                    {menuItems.map((menu, idx) => (
+                    {menuItems.map((menu, idx) =>
                       menu.href ? (
                         <motion.a
                           key={menu.key}
@@ -410,7 +482,7 @@ const Header = ({ className = '' }) => {
                           )}
                         </motion.button>
                       )
-                    ))}
+                    )}
                   </motion.nav>
                 )}
 
@@ -440,7 +512,9 @@ const Header = ({ className = '' }) => {
 
                     {/* Tab Items - Render JSX */}
                     <div className="flex-1 overflow-y-auto">
-                      {menuItems.find((m) => m.key === activeModalTab)?.items?.()}
+                      {menuItems
+                        .find((m) => m.key === activeModalTab)
+                        ?.items?.()}
                     </div>
                   </motion.div>
                 )}

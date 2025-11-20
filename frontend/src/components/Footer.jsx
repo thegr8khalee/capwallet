@@ -29,26 +29,26 @@ const Footer = () => {
                 <ul className="space-y-3 text-sm text-secondary">
                   <li>
                     <a
-                      href="/ai-protection"
+                      href="/ai-features"
                       className="hover:text-primary transition duration-150"
                     >
-                      AI Transaction Protection
+                      AI Features
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/multi-chain"
+                      href="/wallet-features"
                       className="hover:text-primary transition duration-150"
                     >
-                      Multi-Chain Support
+                      Wallet Features
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/self-custody"
+                      href="/trading-defi"
                       className="hover:text-primary transition duration-150"
                     >
-                      Self-Custody Security
+                      Trading & DeFi
                     </a>
                   </li>
                 </ul>
@@ -68,10 +68,18 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/contact"
+                      href="/about"
                       className="hover:text-primary transition duration-150"
                     >
-                      Contact
+                      Careers
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/blogs"
+                      className="hover:text-primary transition duration-150"
+                    >
+                      Blogs
                     </a>
                   </li>
                 </ul>
@@ -81,6 +89,14 @@ const Footer = () => {
               <div>
                 <h3 className="text-lg mb-4 text-primary">Resources</h3>
                 <ul className="space-y-3 text-sm text-secondary">
+                  <li>
+                    <a
+                      href="/contact"
+                      className="hover:text-primary transition duration-150"
+                    >
+                      Contact
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="/support"
@@ -141,7 +157,7 @@ const Footer = () => {
             </div>
             <div className="w-full mt-8 flex gap-3 justify-center md:justify-start lg:pl-16">
               {/** Play Store Badge */}
-              <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
+              {/* <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
                 <img
                   src="/playstore.svg"
                   alt="Get it on Google Play"
@@ -151,10 +167,10 @@ const Footer = () => {
                   <p className="text-xs">Get it on</p>
                   <h3 className="text-lg font-medium">Google Play</h3>
                 </div>
-              </button>
+              </button> */}
 
               {/** App Store Badge */}
-              <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
+              {/* <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
                 <img
                   src="/appstore.svg"
                   alt="Get it on the App Store"
@@ -164,6 +180,11 @@ const Footer = () => {
                   <p className="text-xs">Get it on</p>
                   <h3 className="text-lg font-medium">App Store</h3>
                 </div>
+              </button> */}
+              <button className="btn btn-primary p-6 "
+                onClick={() => window.location = '/download'}
+              >
+                Download
               </button>
             </div>
           </div>

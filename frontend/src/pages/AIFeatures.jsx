@@ -5,50 +5,50 @@ import FeatureCard from '../components/FeatureCard';
 import LoadingScreen from '../components/LoadingScreen';
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
-const AITransactionProtection = ({ setPageLoading }) => {
+const AIFeatures = ({ setPageLoading }) => {
   const benefits = [
     {
       icon: '🚨',
-      text: 'Scam or blacklisted addresses',
+      text: 'Fee optimization',
       bg: 'bg-red-500',
       textColor: 'text-white',
-      img: '/blacklisted.svg',
+      img: '/high-gas-fee.svg',
     },
     {
       icon: '🛑',
-      text: 'Malicious or risky smart contracts',
+      text: '⁠Risk detection',
       bg: 'bg-yellow-500',
       textColor: 'text-white',
       img: '/contract-analysis.svg',
     },
     {
       icon: '⚠️',
-      text: 'Abnormal transaction patterns',
+      text: 'DeFi safety scores',
       bg: 'bg-white',
       textColor: 'text-secondary',
-      img: '/abnormal.svg',
-    },
-    {
-      icon: '🧪',
-      text: 'Fake or spoofed token contracts',
-      bg: 'bg-accent',
-      textColor: 'text-white',
       img: '/fake-contract.svg',
     },
     {
-      icon: '🔗',
-      text: 'Suspicious dApps or phishing sites',
-      bg: 'bg-black',
+      icon: '🧪',
+      text: '⁠Portfolio insights',
+      bg: 'bg-accent',
       textColor: 'text-white',
-      img: '/dApps.svg',
+      img: '/AI-continious.svg',
     },
     {
-      icon: '💸',
-      text: 'High-fee or front-running risks',
+      icon: '🔗',
+      text: 'Real-time market nudges',
       bg: 'bg-primary',
       textColor: 'text-white',
-      img: '/high-gas-fee.svg',
+      img: '/abnormal.svg',
     },
+    // {
+    //   icon: '💸',
+    //   text: 'High-fee or front-running risks',
+    //   bg: 'bg-primary',
+    //   textColor: 'text-white',
+    //   img: '/high-gas-fee.svg',
+    // },
   ];
 
   const steps = [
@@ -158,6 +158,7 @@ const AITransactionProtection = ({ setPageLoading }) => {
           Cap Wallet's AI automatically scans every transaction, contract, and interaction—protecting you from scams, hacks, and malicious activity before it happens.
         </motion.p> */}
         <motion.button
+          onClick={() => window.location = '/download'}
           className="btn btn-primary p-6"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -177,7 +178,7 @@ const AITransactionProtection = ({ setPageLoading }) => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="px-4 sm:px-6 font-montserrat font-bold text-5xl md:text-6xl text-start mb-4 text-secondary">
+        <h1 className="px-4 sm:px-6 font-montserrat font-medium text-5xl md:text-6xl text-start mb-4 text-secondary">
           What This Feature Does
         </h1>
         <div
@@ -216,7 +217,7 @@ const AITransactionProtection = ({ setPageLoading }) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-montserrat font-bold text-secondary mb-20 text-center z-10">
+        <h2 className="text-4xl font-montserrat font-medium text-secondary mb-20 text-center z-10">
           How It Works
         </h2>
         <div className="relative space-y-8">
@@ -345,7 +346,7 @@ const AITransactionProtection = ({ setPageLoading }) => {
       </motion.section>
 
       {/* CTA */}
-      <motion.section
+      {/* <motion.section
         className="px-6 max-w-6xl mx-auto py-20 text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -357,20 +358,20 @@ const AITransactionProtection = ({ setPageLoading }) => {
         <p className="text-xl text-gray-600 mb-8">
           Experience the most advanced wallet security in Web3.
         </p>
-        <motion.button
+        <motion.a
+          href="/download"
           className="btn btn-primary p-6"
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <PhoneIcon />
           Download Cap Wallet
-        </motion.button>
-      </motion.section>
+        </motion.a>
+      </motion.section> */}
     </div>
     )}
     </>
   );
 };
 
-export default AITransactionProtection;
+export default AIFeatures;

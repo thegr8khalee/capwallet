@@ -319,15 +319,15 @@ const About = () => {
         <p className="text-xl text-gray-600 mb-8">
           Download Cap Wallet today and take control of your digital assets.
         </p>
-        <motion.button
+        <motion.a
+          href="/download"
           className="btn btn-primary p-6"
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <PhoneIcon />
           Download Cap Wallet
-        </motion.button>
+        </motion.a>
       </motion.section>
     </div>
   );
