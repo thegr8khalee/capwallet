@@ -126,7 +126,7 @@ const Careers = ({ setPageLoading }) => {
                 transition={{ delay: 0.6 }}
               >
                 <motion.a
-                  href="/"
+                  href="#roles"
                   className="btn btn-primary p-6"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -217,6 +217,7 @@ const Careers = ({ setPageLoading }) => {
               </div>
             </motion.section>
             <motion.section
+            id='roles'
               className=" w-full py-20 text-start sm:text-center px-4 sm:px-6"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
