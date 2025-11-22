@@ -39,7 +39,7 @@ function App() {
           <Route path='/support' element={<Support />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/download' element={<Download />} />
+          <Route path='/download/:selectedPlatform?' element={<Download />} />
           <Route path='/careers' element={<Careers />} />
           <Route path='/blogs' element={<Blog />} />
         </Routes>

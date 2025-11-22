@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Chrome, Globe, Apple, Smartphone, Monitor, CheckCircle } from 'lucide-react';
+import {
+  Download,
+  Chrome,
+  Globe,
+  Apple,
+  Smartphone,
+  Monitor,
+  CheckCircle,
+} from 'lucide-react';
+import { useParams } from 'react-router-dom';
 
 const DownloadPage = () => {
-  const [selectedPlatform, setSelectedPlatform] = useState('mobile');
+  const { selectedPlatform } = useParams();
+  // const [selectedPlatform, setSelectedPlatform] = useState(
+  //   initialSelectedPlatform || 'mobile'
+  // );
+  const activePlatform = selectedPlatform || "mobile";
 
   const mobileDownloads = [
     {
@@ -198,7 +211,7 @@ const DownloadPage = () => {
       </motion.section>
 
       {/* Mobile Downloads */}
-      {selectedPlatform === 'mobile' && (
+      {activePlatform === 'mobile' && (
         <motion.section
           className="px-6 max-w-6xl mx-auto py-20"
           initial={{ opacity: 0, y: 50 }}
@@ -218,13 +231,19 @@ const DownloadPage = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, borderColor: '#00C9A7' }}
               >
-                <img src={app.icon} alt={app.os} className="mx-auto mb-4 w-16 h-16" />
+                <img
+                  src={app.icon}
+                  alt={app.os}
+                  className="mx-auto mb-4 w-16 h-16"
+                />
                 <h3 className="text-2xl font-semibold text-secondary mb-2">
                   {app.os}
                 </h3>
                 <p className="text-gray-600 mb-4">{app.description}</p>
                 <div className="mb-6 space-y-1">
-                  <p className="text-sm text-gray-500">Version: {app.version}</p>
+                  <p className="text-sm text-gray-500">
+                    Version: {app.version}
+                  </p>
                   <p className="text-sm text-gray-500">{app.requirements}</p>
                 </div>
                 <motion.a
@@ -242,15 +261,29 @@ const DownloadPage = () => {
 
           {/* Quick Download Badges */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#" className="flex justify-center bg-black items-center text-white rounded-xl px-4 py-3 hover:opacity-90 transition duration-200">
-              <img src="/playstore.svg" alt="Get it on Google Play" className="w-10 h-10 mr-3" />
+            <a
+              href="#"
+              className="flex justify-center bg-black items-center text-white rounded-xl px-4 py-3 hover:opacity-90 transition duration-200"
+            >
+              <img
+                src="/playstore.svg"
+                alt="Get it on Google Play"
+                className="w-10 h-10 mr-3"
+              />
               <div className="flex flex-col text-start">
                 <p className="text-xs">Get it on</p>
                 <h3 className="text-xl font-medium">Google Play</h3>
               </div>
             </a>
-            <a href="#" className="flex justify-center bg-black items-center text-white rounded-xl px-4 py-3 hover:opacity-90 transition duration-200">
-              <img src="/appstore.svg" alt="Download on the App Store" className="w-10 h-10 mr-3" />
+            <a
+              href="#"
+              className="flex justify-center bg-black items-center text-white rounded-xl px-4 py-3 hover:opacity-90 transition duration-200"
+            >
+              <img
+                src="/appstore.svg"
+                alt="Download on the App Store"
+                className="w-10 h-10 mr-3"
+              />
               <div className="flex flex-col text-start">
                 <p className="text-xs">Download on the</p>
                 <h3 className="text-xl font-medium">App Store</h3>
@@ -261,7 +294,7 @@ const DownloadPage = () => {
       )}
 
       {/* Browser Extensions */}
-      {selectedPlatform === 'browser' && (
+      {activePlatform === 'browser' && (
         <motion.section
           className="px-6 max-w-6xl mx-auto py-20"
           initial={{ opacity: 0, y: 50 }}
@@ -269,52 +302,13 @@ const DownloadPage = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-4xl font-montserrat font-bold text-secondary mb-12 text-center">
-            Browser Extensions
+            Coming Soon
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {browserExtensions.map((browser, index) => (
-              <motion.div
-                key={index}
-                className={`p-8 bg-white rounded-2xl border border-gray-200 text-center ${
-                  browser.comingSoon ? 'opacity-60' : ''
-                }`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: browser.comingSoon ? 0.6 : 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={!browser.comingSoon ? { scale: 1.02, borderColor: '#00C9A7' } : {}}
-              >
-                <img src={browser.icon} alt={browser.browser} className="mx-auto mb-4 w-16 h-16" />
-                <h3 className="text-2xl font-semibold text-secondary mb-2">
-                  {browser.browser}
-                </h3>
-                <p className="text-gray-600 mb-4">{browser.description}</p>
-                <div className="mb-6 space-y-1">
-                  <p className="text-sm text-gray-500">Version: {browser.version}</p>
-                  <p className="text-sm text-gray-500">{browser.requirements}</p>
-                </div>
-                {browser.comingSoon ? (
-                  <div className="btn btn-outline w-full p-4 cursor-not-allowed">
-                    Coming Soon
-                  </div>
-                ) : (
-                  <motion.a
-                    href={browser.link}
-                    className="btn btn-primary w-full p-4"
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Download className="inline-block size-4 mr-2" />
-                    Install Extension
-                  </motion.a>
-                )}
-              </motion.div>
-            ))}
-          </div>
         </motion.section>
       )}
 
       {/* Desktop Apps */}
-      {selectedPlatform === 'desktop' && (
+      {activePlatform === 'desktop' && (
         <motion.section
           className="px-6 max-w-6xl mx-auto py-20"
           initial={{ opacity: 0, y: 50 }}
@@ -334,13 +328,19 @@ const DownloadPage = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, borderColor: '#00C9A7' }}
               >
-                <img src={app.icon} alt={app.os} className="mx-auto mb-4 w-16 h-16" />
+                <img
+                  src={app.icon}
+                  alt={app.os}
+                  className="mx-auto mb-4 w-16 h-16"
+                />
                 <h3 className="text-2xl font-semibold text-secondary mb-2">
                   {app.os}
                 </h3>
                 <p className="text-gray-600 mb-4">{app.description}</p>
                 <div className="mb-6 space-y-1">
-                  <p className="text-sm text-gray-500">Version: {app.version}</p>
+                  <p className="text-sm text-gray-500">
+                    Version: {app.version}
+                  </p>
                   <p className="text-sm text-gray-500">Size: {app.fileSize}</p>
                 </div>
                 <motion.a
@@ -412,7 +412,8 @@ const DownloadPage = () => {
               Download & Install
             </h3>
             <p className="text-gray-600">
-              Choose your platform and download Cap Wallet. Installation takes less than a minute.
+              Choose your platform and download Cap Wallet. Installation takes
+              less than a minute.
             </p>
           </motion.div>
 
@@ -430,7 +431,8 @@ const DownloadPage = () => {
               Create Your Wallet
             </h3>
             <p className="text-gray-600">
-              Set up your wallet in seconds. Secure your seed phrase and enable biometric security.
+              Set up your wallet in seconds. Secure your seed phrase and enable
+              biometric security.
             </p>
           </motion.div>
 
@@ -469,7 +471,8 @@ const DownloadPage = () => {
             Protect yourself from fake apps and malicious extensions.
           </p>
           <p className="text-lg opacity-90">
-            Always verify you're downloading from capwallet.com, official app stores, or verified browser extension stores.
+            Always verify you're downloading from capwallet.com, official app
+            stores, or verified browser extension stores.
           </p>
         </div>
       </motion.section>

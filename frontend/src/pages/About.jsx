@@ -80,8 +80,10 @@ const About = () => {
         >
           Crypto was supposed to unlock freedom.
           <br />
+          <br />
           instead, it became a maze, complex interfaces, hidden risks, endless
           scams, and wallets that leave users on their own.
+          <br />
           <br />
           Cap Wallet exists to fix that.
         </motion.p>
@@ -153,8 +155,9 @@ const About = () => {
             We didn’t want to build “another wallet.” We wanted a guardian.
           </p>
           <p className="text-sm font-medium">
-            A wallet that says: <br /> “Don’t sign this. It looks risky.” <br /> “Use this
-            route — you’ll save gas.” <br /> “That contract behaves like a scam.”
+            A wallet that says: <br /> “Don’t sign this. It looks risky.” <br />{' '}
+            “Use this route — you’ll save gas.” <br /> “That contract behaves
+            like a scam.”
           </p>
         </motion.div>
 
@@ -177,26 +180,7 @@ const About = () => {
             and intelligence.
           </p>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 100, scale: 0.5 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, type: 'spring', bounce: 0.3 }}
-          className="bg-accent/50 text-secondary p-4 text-center flex flex-col space-y-2 rounded-3xl max-w-sm mx-auto"
-        >
-          <h1 className="text-xs font-medium">Users</h1>
-          <p className="text-3xl font-semibold">20K+</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 100, scale: 0.5 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, type: 'spring', bounce: 0.3 }}
-          className="bg-primary text-white p-4 text-center flex flex-col space-y-2 rounded-3xl max-w-sm mx-auto"
-        >
-          <h1 className="text-xs font-medium">Transactions</h1>
-          <p className="text-3xl font-semibold">$5M</p>
-        </motion.div>
+       
       </motion.section>
 
       <motion.section
@@ -296,8 +280,9 @@ const About = () => {
             We didn’t want to build “another wallet.” We wanted a guardian.
           </p>
           <p className="text-sm font-medium">
-            A wallet that says: <br /> “Don’t sign this. It looks risky.” <br /> “Use this
-            route — you’ll save gas.” <br /> “That contract behaves like a scam.”
+            A wallet that says: <br /> “Don’t sign this. It looks risky.” <br />{' '}
+            “Use this route — you’ll save gas.” <br /> “That contract behaves
+            like a scam.”
           </p>
           {/* <p className="text-sm font-medium">
             A wallet that watches your back.
@@ -373,54 +358,6 @@ const About = () => {
             and protects you.
           </p>
         </motion.div>
-        <motion.div
-          initial={{
-            top: '50%',
-            left: '50%',
-            x: '-50%',
-            y: '-50%',
-            position: 'absolute',
-          }}
-          whileInView={{
-            top: '30%',
-            left: '20%',
-            x: '-50%', // keep centering on its own width
-            y: '-50%',
-          }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{
-            duration: 1.2,
-            bounce: 0.4,
-          }}
-          className="z-5 bg-accent/50 w-25 items-center justify-center aspect-square text-secondary p-4 text-center flex flex-col space-y-2 rounded-3xl mx-auto"
-        >
-          <h1 className="text-xs">Users</h1>
-          <p className="text-3xl font-medium">20K+</p>
-        </motion.div>
-        <motion.div
-          initial={{
-            top: '50%',
-            left: '50%',
-            x: '-50%',
-            y: '-50%',
-            position: 'absolute',
-          }}
-          whileInView={{
-            top: '80%',
-            left: '80%',
-            x: '-50%', // keep centering on its own width
-            y: '-50%',
-          }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{
-            duration: 1.2,
-            bounce: 0.4,
-          }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white p-4 text-center flex flex-col space-y-2 rounded-3xl max-w-sm mx-auto"
-        >
-          <h1 className="text-xs font-medium">Transactions</h1>
-          <p className="text-3xl font-semibold">$5M</p>
-        </motion.div>
       </motion.section>
 
       {/* Beta Launch */}
@@ -456,9 +393,9 @@ const About = () => {
         >
           <p className="text-3xl font-semibold">We focused on</p>
           <p className="text-sm font-medium">
-            - Real-time scam detection <br />- ⁠Predictive gas optimization <br />- ⁠Safer
-            swaps <br />- ⁠Clean interface <br />- ⁠Multichain support <br />- ⁠Browser extension
-            + mobile app
+            - Real-time scam detection <br />- ⁠Predictive gas optimization{' '}
+            <br />- ⁠Safer swaps <br />- ⁠Clean interface <br />- ⁠Multichain
+            support <br />- ⁠Browser extension + mobile app
           </p>
         </motion.div>
         <motion.div
@@ -543,9 +480,9 @@ const About = () => {
         >
           <p className="text-3xl font-semibold">We focused on</p>
           <p className="text-sm font-medium">
-            - Real-time scam detection <br />- ⁠Predictive gas optimization <br />- ⁠Safer
-            swaps <br />- ⁠Clean interface <br />- ⁠Multichain support <br />- ⁠Browser extension
-            + mobile app
+            - Real-time scam detection <br />- ⁠Predictive gas optimization{' '}
+            <br />- ⁠Safer swaps <br />- ⁠Clean interface <br />- ⁠Multichain
+            support <br />- ⁠Browser extension + mobile app
           </p>
         </motion.div>
         <motion.div
@@ -620,9 +557,10 @@ const About = () => {
             We pushed deeper into real protection
           </h1>
           <p className="text-sm font-medium">
-            - AI contract analysis <br /> - ⁠Address risk scoring <br /> - ⁠Phishing & fake
-            website detection <br /> - ⁠Safer swaps with routing intelligence <br /> -
-            ⁠Predictive alerts <br /> - ⁠Human-friendly error explanations
+            - AI contract analysis <br /> - ⁠Address risk scoring <br /> -
+            ⁠Phishing & fake website detection <br /> - ⁠Safer swaps with
+            routing intelligence <br /> - ⁠Predictive alerts <br /> -
+            ⁠Human-friendly error explanations
           </p>
         </motion.div>
 
@@ -634,7 +572,7 @@ const About = () => {
           className=" items-center justify-center bg-accent/50 text-secondary p-4 text-center max-w-40 aspect-square flex flex-col space-y-2 rounded-3xl mx-auto"
         >
           <h1 className="text-xs font-medium">Users</h1>
-          <p className="text-3xl font-semibold">150K+</p>
+          <p className="text-3xl font-semibold">200K+</p>
           <h1 className="text-xs font-medium">190+ countries.</h1>
         </motion.div>
         <motion.div
@@ -656,7 +594,7 @@ const About = () => {
           className=" items-center justify-center bg-accent/50 text-secondary p-4 text-center max-w-40 aspect-square flex flex-col space-y-2 rounded-3xl mx-auto"
         >
           <h1 className="text-xs font-medium">Swap Volume</h1>
-          <p className="text-3xl font-semibold">$1.5B+</p>
+          <p className="text-3xl font-semibold">$100M+</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 100, scale: 0.8 }}
@@ -677,7 +615,7 @@ const About = () => {
           className=" items-center justify-center bg-primary text-white p-4 text-center max-w-40 aspect-square flex flex-col space-y-2 rounded-3xl mx-auto"
         >
           <h1 className="text-xs font-medium">Browser Extension</h1>
-          <p className="text-3xl font-semibold">500K+</p>
+          <p className="text-3xl font-semibold">50K+</p>
           <h1 className="text-xs font-medium">installs in under 3 months.</h1>
         </motion.div>
       </motion.section>
@@ -717,9 +655,10 @@ const About = () => {
             We pushed deeper into real protection
           </h1>
           <p className="text-sm font-medium">
-            - AI contract analysis <br /> - ⁠Address risk scoring <br /> - ⁠Phishing & fake
-            website detection <br /> - ⁠Safer swaps with routing intelligence <br /> -
-            ⁠Predictive alerts <br /> - ⁠Human-friendly error explanations
+            - AI contract analysis <br /> - ⁠Address risk scoring <br /> -
+            ⁠Phishing & fake website detection <br /> - ⁠Safer swaps with
+            routing intelligence <br /> - ⁠Predictive alerts <br /> -
+            ⁠Human-friendly error explanations
           </p>
         </motion.div>
         <motion.div
@@ -850,7 +789,7 @@ const About = () => {
 
       {/* CTA */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20 text-center"
+        className="px-6 max-w-6xl mx-auto text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -862,12 +801,13 @@ const About = () => {
           Download Cap Wallet today and take control of your digital assets.
         </p>
         <motion.button
+        onClick={() => window.location = "/download"}
           className="btn btn-primary p-6"
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <PhoneIcon />
+          {/* <PhoneIcon /> */}
           Download Cap Wallet
         </motion.button>
       </motion.section>

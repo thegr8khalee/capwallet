@@ -110,11 +110,15 @@ const Careers = ({ setPageLoading }) => {
                 about making the open economy a place where everyone feels
                 confident, not afraid.
                 <br />
+                <br />
                 If you want to work on something meaningful…
+                {/* <br /> */}
                 <br />
                 If you want to protect millions from scams…
+                {/* <br /> */}
                 <br />
                 If you want to build a product your younger self wishes existed…
+                <br />
                 <br />
                 Then you’ll feel at home here.
               </motion.p>

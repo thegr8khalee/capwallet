@@ -5,6 +5,7 @@ import LoadingScreen from '../components/LoadingScreen';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useImagePreloader } from '../hooks/useImagePreloader';
 import { LiquidGlass } from '@liquidglass/react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = ({ setPageLoading }) => {
   const features = [
@@ -140,6 +141,8 @@ const Home = ({ setPageLoading }) => {
     }
   }, [imagesLoaded, setPageLoading]);
 
+  const navigate = useNavigate();
+
   return (
     <>
       <AnimatePresence>
@@ -150,14 +153,14 @@ const Home = ({ setPageLoading }) => {
         {imagesLoaded && (
           <>
             <motion.section
-              className="px-6 max-w-6xl mx-auto flex flex-col space-y- items-center justify-center min-h-screen"
+              className="px-6 max-w-6xl mx-auto flex flex-col space-y- items-center justify-center pt-34"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, type: 'spring', bounce: 0.3 }}
             >
               <div className="flex flex-col items-center max-w-4xl ">
-                <motion.p
+                {/* <motion.p
                   className="text-primary text-center"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -165,28 +168,44 @@ const Home = ({ setPageLoading }) => {
                   transition={{ delay: 0.2 }}
                 >
                   Your secure, non-custodial wallet
-                </motion.p>
+                </motion.p> */}
                 <motion.h1
-                  className="mb-4 font-montserrat text-secondary font-bold text-4xl md:text-5xl text-center lg:text-6xl xl:text-7xl"
+                  className="mb-4 font-montserrat text-secondary font-medium sm:font-semibold text-4xl md:text-5xl text-center lg:text-6xl xl:text-7xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, type: 'spring', bounce: 0.4 }}
                 >
-                  Your Gateway to the Open Economy
+                  The Gateway to the Open Economy
                 </motion.h1>
-                <motion.button
-                  className="btn btn-primary p-6 mb-4"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                >
-                  {/* <PhoneIcon /> */}
-                  Download
-                </motion.button>
+                <div className='flex flex-col items-center justify-center sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4'>
+                  <motion.button
+                    onClick={() => navigate('/download/mobile')}
+                    className="btn btn-primary p-6 mb-4"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                  >
+                    {/* <PhoneIcon /> */}
+                    Download
+                  </motion.button>
+                  <motion.button
+                    onClick={() => navigate('/download/browser')}
+                    className="btn btn-outline rounded-full border-accent text-secondary hover:bg-accent hover:text-white p-6 mb-4"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                  >
+                    {/* <PhoneIcon /> */}
+                    Install Browser Extension
+                  </motion.button>
+                </div>
               </div>
             </motion.section>
 
