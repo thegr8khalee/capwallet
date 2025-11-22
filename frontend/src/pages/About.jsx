@@ -223,7 +223,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -251,7 +251,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -283,7 +283,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -325,7 +325,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -358,7 +358,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -387,7 +387,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -411,7 +411,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -507,7 +507,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -534,7 +534,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -562,7 +562,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -586,7 +586,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -706,7 +706,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -736,7 +736,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -761,7 +761,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -786,7 +786,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -810,7 +810,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
@@ -835,7 +835,7 @@ const About = () => {
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{
             duration: 1.2,
             bounce: 0.4,
