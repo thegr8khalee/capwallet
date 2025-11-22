@@ -6,87 +6,6 @@ import LoadingScreen from '../components/LoadingScreen';
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
 const WalletFeatures = ({ setPageLoading }) => {
-  const coreChains = [
-    { name: 'Bitcoin', logo: 'btc.svg' },
-    { name: 'Solana', logo: 'sol.svg' },
-    { name: 'Ethereum', logo: 'eth.svg' },
-    { name: 'Binance Smart Chain', logo: 'bnb.svg' },
-    { name: 'Polygon', logo: 'polygon.svg' },
-  ];
-
-  const upcomingChains = [
-    'Avalanche',
-    'Arbitrum',
-    'Optimism',
-    'TON',
-    'Cosmos',
-    'Sui',
-    'Aptos',
-    'Near Protocol',
-    '100 more in progress',
-  ];
-
-  const aiChecks = [
-    'Price',
-    'Slippage',
-    'Route safety',
-    'Gas fees',
-    'Bridge reliability',
-  ];
-
-  const benefits = [
-    'No need for 5 different wallets',
-    'No more switching RPCs',
-    'No more centralized exchanges',
-    'One click to move assets between chains',
-    'Safer than traditional bridges',
-    'Faster than most DEX aggregators',
-  ];
-
-  const howItWorks = [
-    'Choose "From" and "To" chain',
-    'AI fetches routes from DEXs + bridges',
-    'You select the best pathway',
-    'You approve and locally sign',
-    'Cap Wallet tracks progress in real time',
-  ];
-
-  const users = [
-    'Multi-chain DeFi users',
-    'Cross-chain traders',
-    'NFT collectors working across ecosystems',
-    'GameFi players',
-    'Users sending crypto internationally',
-  ];
-
-  const faqs = [
-    {
-      question: 'Are swaps decentralized?',
-      answer: 'Yes. All swaps use decentralized protocols.',
-    },
-    {
-      question: 'Is bridging safe?',
-      answer: 'AI scores each route by risk before recommending it.',
-    },
-    {
-      question: 'Do I need separate networks or gas settings?',
-      answer: 'No. Cap Wallet handles all chain configs automatically.',
-    },
-  ];
-
-  const imageUrls = [
-    ...coreChains.map((chain) => `/${chain.logo}`),
-    ...features[0].features.map(f => f.img),
-    '/app.svg',
-  ];
-  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
-
-  useEffect(() => {
-    if (setPageLoading) {
-      setPageLoading(!imagesLoaded);
-    }
-  }, [imagesLoaded, setPageLoading]);
-
   const features = [
     {
       hero: 'Wallet Features',
@@ -203,6 +122,88 @@ const WalletFeatures = ({ setPageLoading }) => {
       bg: 'bg-secondary',
     },
   ];
+
+  const coreChains = [
+    { name: 'Bitcoin', logo: 'btc.svg' },
+    { name: 'Solana', logo: 'sol.svg' },
+    { name: 'Ethereum', logo: 'eth.svg' },
+    { name: 'Binance Smart Chain', logo: 'bnb.svg' },
+    { name: 'Polygon', logo: 'polygon.svg' },
+  ];
+
+  const upcomingChains = [
+    'Avalanche',
+    'Arbitrum',
+    'Optimism',
+    'TON',
+    'Cosmos',
+    'Sui',
+    'Aptos',
+    'Near Protocol',
+    '100 more in progress',
+  ];
+
+  const aiChecks = [
+    'Price',
+    'Slippage',
+    'Route safety',
+    'Gas fees',
+    'Bridge reliability',
+  ];
+
+  const benefits = [
+    'No need for 5 different wallets',
+    'No more switching RPCs',
+    'No more centralized exchanges',
+    'One click to move assets between chains',
+    'Safer than traditional bridges',
+    'Faster than most DEX aggregators',
+  ];
+
+  const howItWorks = [
+    'Choose "From" and "To" chain',
+    'AI fetches routes from DEXs + bridges',
+    'You select the best pathway',
+    'You approve and locally sign',
+    'Cap Wallet tracks progress in real time',
+  ];
+
+  const users = [
+    'Multi-chain DeFi users',
+    'Cross-chain traders',
+    'NFT collectors working across ecosystems',
+    'GameFi players',
+    'Users sending crypto internationally',
+  ];
+
+  const faqs = [
+    {
+      question: 'Are swaps decentralized?',
+      answer: 'Yes. All swaps use decentralized protocols.',
+    },
+    {
+      question: 'Is bridging safe?',
+      answer: 'AI scores each route by risk before recommending it.',
+    },
+    {
+      question: 'Do I need separate networks or gas settings?',
+      answer: 'No. Cap Wallet handles all chain configs automatically.',
+    },
+  ];
+
+  const imageUrls = [
+    ...coreChains.map((chain) => `/${chain.logo}`),
+    ...features[0].features.map((f) => f.img),
+    '/app.svg',
+  ];
+  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
+
+  useEffect(() => {
+    if (setPageLoading) {
+      setPageLoading(!imagesLoaded);
+    }
+  }, [imagesLoaded, setPageLoading]);
+
   return (
     <>
       <AnimatePresence>
@@ -233,8 +234,8 @@ const WalletFeatures = ({ setPageLoading }) => {
             >
               Bitcoin. Solana. Ethereum. Polygon. BSC. TON. Sui. Aptos.
             </motion.p>
-              <motion.button
-              onClick={() => window.location = '/download'}
+            <motion.button
+              onClick={() => (window.location = '/download')}
               className="btn btn-primary p-6"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}

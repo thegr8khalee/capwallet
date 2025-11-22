@@ -4,6 +4,7 @@ import FeatureCard from '../components/FeatureCard';
 import LoadingScreen from '../components/LoadingScreen';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useImagePreloader } from '../hooks/useImagePreloader';
+import { LiquidGlass } from '@liquidglass/react';
 
 const Home = ({ setPageLoading }) => {
   const features = [
