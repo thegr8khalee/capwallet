@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // Assuming 'bg-secondary', 'text-secondary', 'btn-primary', and 'var(--color-background)'
 // are defined in your Tailwind config or CSS, where:
@@ -18,7 +19,6 @@ const Footer = () => {
         {/* Top Section: Logo/Newsletter and Nav Links */}
         <div className="flex flex-col lg:flex-row justify-">
           {/* A. Logo and Newsletter Section */}
-          
 
           {/* B. Navigation Links Grid */}
           <div className="flex flex-col space-y-8 w-full">
@@ -68,7 +68,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/about"
+                      href="/careers"
                       className="hover:text-primary transition duration-150"
                     >
                       Careers
@@ -133,7 +133,16 @@ const Footer = () => {
                       href="#"
                       className="hover:text-primary transition duration-150"
                     >
-                      Twitter
+                     (x) Twitter
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary transition duration-150"
+                    >
+                     Discord
                     </a>
                   </li>
                   <li>
@@ -141,7 +150,23 @@ const Footer = () => {
                       href="#"
                       className="hover:text-primary transition duration-150"
                     >
-                      LinkedIn
+                      YouTube
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary transition duration-150"
+                    >
+                      Reddit
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary transition duration-150"
+                    >
+                      GitHub
                     </a>
                   </li>
                   <li>
@@ -156,36 +181,31 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full mt-8 flex gap-3 justify-center md:justify-start lg:pl-16">
-              {/** Play Store Badge */}
-              {/* <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
-                <img
-                  src="/playstore.svg"
-                  alt="Get it on Google Play"
-                  className="w-8 h-8 mr-2"
-                />
-                <div className="flex flex-col text-start -space-y-1">
-                  <p className="text-xs">Get it on</p>
-                  <h3 className="text-lg font-medium">Google Play</h3>
-                </div>
-              </button> */}
-
-              {/** App Store Badge */}
-              {/* <button className="flex justify-center bg-black items-center text-white rounded-[6px] px-2 py-1 overflow-hidden hover:opacity-90 transition duration-200">
-                <img
-                  src="/appstore.svg"
-                  alt="Get it on the App Store"
-                  className="w-8 h-8 mr-2"
-                />
-                <div className="flex flex-col text-start -space-y-1">
-                  <p className="text-xs">Get it on</p>
-                  <h3 className="text-lg font-medium">App Store</h3>
-                </div>
-              </button> */}
-              <button className="btn btn-primary p-6 "
-                onClick={() => window.location = '/download'}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                className="btn btn-primary p-6 "
+                onClick={() => (window.location = '/download')}
               >
                 Download
-              </button>
+              </motion.button>
+              <motion.button
+                onClick={() => navigate('/download/browser')}
+                className="btn btn-outline rounded-full border-accent text-secondary hover:bg-accent hover:text-white p-6 mb-4"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              >
+                {/* <PhoneIcon /> */}
+                Install Browser Extension
+              </motion.button>
             </div>
           </div>
         </div>
