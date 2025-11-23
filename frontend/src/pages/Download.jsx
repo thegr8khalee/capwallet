@@ -16,7 +16,7 @@ const DownloadPage = () => {
   // const [selectedPlatform, setSelectedPlatform] = useState(
   //   initialSelectedPlatform || 'mobile'
   // );
-  const activePlatform = selectedPlatform || "mobile";
+  const [activePlatform, setActivePlatform] = useState(selectedPlatform || 'mobile');
 
   const mobileDownloads = [
     {
@@ -175,9 +175,9 @@ const DownloadPage = () => {
           transition={{ delay: 0.5 }}
         >
           <button
-            onClick={() => setSelectedPlatform('mobile')}
+            onClick={() => setActivePlatform('mobile')}
             className={`flex justify-center items-center text-sm px-8 py-4 rounded-full font-semibold transition-all ${
-              selectedPlatform === 'mobile'
+              activePlatform === 'mobile'
                 ? 'bg-accent text-white'
                 : 'bg-white text-secondary border border-gray-300 hover:border-accent'
             }`}
@@ -186,9 +186,9 @@ const DownloadPage = () => {
             Mobile
           </button>
           <button
-            onClick={() => setSelectedPlatform('browser')}
+            onClick={() => setActivePlatform('browser')}
             className={`flex justify-center items-center text-sm px-8 py-4 rounded-full font-semibold transition-all ${
-              selectedPlatform === 'browser'
+              activePlatform === 'browser'
                 ? 'bg-accent text-white'
                 : 'bg-white text-secondary border border-gray-300 hover:border-accent'
             }`}
@@ -197,9 +197,9 @@ const DownloadPage = () => {
             Browser
           </button>
           <button
-            onClick={() => setSelectedPlatform('desktop')}
+            onClick={() => setActivePlatform('desktop')}
             className={`flex justify-center items-center text-sm px-8 py-4 rounded-full font-semibold transition-all ${
-              selectedPlatform === 'desktop'
+              activePlatform === 'desktop'
                 ? 'bg-accent text-white'
                 : 'bg-white text-secondary border border-gray-300 hover:border-accent'
             }`}
