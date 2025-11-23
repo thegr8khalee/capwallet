@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 // Assuming 'bg-secondary', 'text-secondary', 'btn-primary', and 'var(--color-background)'
 // are defined in your Tailwind config or CSS, where:
@@ -7,6 +8,7 @@ import { motion } from 'framer-motion';
 // - var(--color-background) is a light color (for the newsletter box).
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     // 1. Footer: Set padding and a distinct top border/shadow if desired.
     <footer className="p-4 text-primary">
