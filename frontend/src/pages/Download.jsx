@@ -208,8 +208,12 @@ const DownloadPage = ({ setPageLoading }) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                Be amongst the first to experience the future of secure and
-                user-friendly crypto management.
+                Step into the future of crypto with a wallet that actually
+                thinks with you. 
+                <br />
+                <br />
+                Cap Wallet protects you, guides you, and helps
+                you move through Web3 with confidence, not confusion.
               </motion.p>
 
               <motion.form
@@ -238,7 +242,7 @@ const DownloadPage = ({ setPageLoading }) => {
             </motion.section>
 
             {/* Installation Guide */}
-            <motion.section
+            {/* <motion.section
               className="px-6 max-w-6xl mx-auto py-20"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -332,10 +336,10 @@ const DownloadPage = ({ setPageLoading }) => {
                   </div>
                 </motion.div>
               </div>
-            </motion.section>
+            </motion.section> */}
 
             {/* Features Section */}
-            <motion.section
+            {/* <motion.section
               className="px-6 max-w-6xl mx-auto py-20"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -361,10 +365,10 @@ const DownloadPage = ({ setPageLoading }) => {
                   ))}
                 </div>
               </div>
-            </motion.section>
+            </motion.section> */}
 
             {/* Security Note */}
-            <motion.section
+            {/* <motion.section
               className="px-6 max-w-6xl mx-auto py-20"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -382,10 +386,10 @@ const DownloadPage = ({ setPageLoading }) => {
                   app stores, or verified browser extension stores.
                 </p>
               </div>
-            </motion.section>
+            </motion.section> */}
 
             {/* Support CTA */}
-            <motion.section
+            {/* <motion.section
               className="px-6 max-w-6xl mx-auto py-20 text-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -405,7 +409,7 @@ const DownloadPage = ({ setPageLoading }) => {
               >
                 Visit Support Center
               </motion.a>
-            </motion.section>
+            </motion.section> */}
           </>
         )}
       </div>{' '}

@@ -128,7 +128,7 @@ const TradingDeFi = ({ setPageLoading }) => {
           text: 'On/off-ramp',
           bg: 'bg-secondary',
           textColor: 'text-white',
-          img: '/off-ramp.svg',
+          img: '/ramp.svg',
         },
         {
           text: 'dApp browser',

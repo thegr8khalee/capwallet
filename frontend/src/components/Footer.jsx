@@ -193,9 +193,9 @@ const Footer = () => {
                 className="btn btn-primary p-6 "
                 onClick={() => (window.location = '/download')}
               >
-                Download
+                Join Waitlist
               </motion.button>
-              <motion.button
+              {/* <motion.button
                 onClick={() => navigate('/download/browser')}
                 className="btn btn-outline rounded-full border-accent text-secondary hover:bg-accent hover:text-white p-6 mb-4"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -205,9 +205,9 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
               >
-                {/* <PhoneIcon /> */}
+                
                 Install Browser Extension
-              </motion.button>
+              </motion.button> */}
             </div>
           </div>
         </div>

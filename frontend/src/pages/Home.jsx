@@ -76,7 +76,7 @@ const Home = ({ setPageLoading }) => {
           text: 'On/off-ramp',
           bg: 'bg-secondary',
           textColor: 'text-white',
-          img: '/off-ramp.svg',
+          img: '/ramp.svg',
         },
         {
           text: 'dApp browser',
@@ -192,7 +192,7 @@ const Home = ({ setPageLoading }) => {
                     {/* <PhoneIcon /> */}
                     Download
                   </motion.button>
-                  <motion.button
+                  {/* <motion.button
                     onClick={() => navigate('/download/browser')}
                     className="btn btn-outline rounded-full border-accent text-secondary hover:bg-accent hover:text-white p-6 mb-4"
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -202,9 +202,9 @@ const Home = ({ setPageLoading }) => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
-                    {/* <PhoneIcon /> */}
+                    
                     Install Browser Extension
-                  </motion.button>
+                  </motion.button> */}
                 </div>
               </div>
             </motion.section>
