@@ -1,10 +1,13 @@
 {
   "dependencies": {
     "axios": "^1.12.2",
-    "corecomm-website": "file:..",
+    "cap-wallet": "file:..",
+    "Cap-wallet": "file:..",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "express": "^4.19.2",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.0",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.1.10",
     "path": "^0.12.7",
@@ -15,8 +18,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
