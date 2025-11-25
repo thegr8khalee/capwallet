@@ -161,6 +161,14 @@ const Home = ({ setPageLoading }) => {
     },
   ];
 
+  const security = [
+    '/one.svg',
+    '/two.svg',
+    '/three.svg',
+    '/four.svg',
+    '/five.svg',
+  ];
+
   // Collect all image URLs for preloading
   const imageUrls = [
     ...features.flatMap((section) => section.features.map((f) => f.img)),
@@ -377,11 +385,10 @@ const Home = ({ setPageLoading }) => {
             </motion.section>
 
             <motion.section
-              className="my-24 sm:h-screen flex flex-col md:space-x-4 space-y-4 items-start"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
+              className="lg:min-h-screen mx-auto text-center py-20"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
             >
               <motion.h1
                 className="px-6 text-secondary font-montserrat font-medium text-4xl md:text-5xl text-start"
@@ -390,13 +397,13 @@ const Home = ({ setPageLoading }) => {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', bounce: 0.4 }}
               >
-                {features[3].hero}
+                Security Features
               </motion.h1>
               <div
-                className="w-full flex overflow-x-auto overflow-y-hidden"
+                className="w-full h-full flex overflow-x-auto overflow-y-hidden"
                 style={{ scrollbarWidth: 'none' }}
               >
-                {features[3].features.map((feature, index) => (
+                {security.map((principle, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 50 }}
@@ -407,13 +414,12 @@ const Home = ({ setPageLoading }) => {
                       type: 'spring',
                       bounce: 0.5,
                     }}
-                    className="h-full"
+                    className="h-125 sm:h-150 aspect-9/12 py-2"
                   >
-                    <FeatureCard
-                      feature={feature.text}
-                      bg={feature.bg}
-                      textColor={feature.textColor}
-                      img={feature.img}
+                    <img
+                      src={principle}
+                      alt=""
+                      className="rounded-3xl h-full m-2"
                     />
                   </motion.div>
                 ))}
