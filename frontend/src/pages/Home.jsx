@@ -177,6 +177,12 @@ const Home = ({ setPageLoading }) => {
     '/wave.svg',
     '/card.svg',
     '/app.svg',
+    '/one.svg',
+    '/two.svg',
+    '/six.svg',
+    '/three.svg',
+    '/four.svg',
+    '/five.svg',
   ];
 
   const { imagesLoaded, progress } = useImagePreloader(imageUrls);
