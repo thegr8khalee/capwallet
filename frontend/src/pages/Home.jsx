@@ -226,7 +226,7 @@ const Home = ({ setPageLoading }) => {
                     transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
                     {/* <PhoneIcon /> */}
-                    Download
+                    Join Waitlist
                   </motion.button>
                   {/* <motion.button
                     onClick={() => navigate('/download/browser')}
