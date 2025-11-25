@@ -164,9 +164,11 @@ const Home = ({ setPageLoading }) => {
   const security = [
     '/one.svg',
     '/two.svg',
+    '/six.svg',
     '/three.svg',
     '/four.svg',
     '/five.svg',
+
   ];
 
   // Collect all image URLs for preloading
