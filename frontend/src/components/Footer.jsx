@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-8 w-full">
             <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 lg:pl-16">
               {/* 1. Features */}
-              <div>
+              {/* <div>
                 <h3 className="text-lg mb-4 text-primary">Features</h3>
                 <ul className="space-y-3 text-sm text-secondary">
                   <li>
@@ -54,7 +54,7 @@ const Footer = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               {/* 2. Company */}
               <div>

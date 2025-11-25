@@ -81,7 +81,7 @@ const About = () => {
           Crypto was supposed to unlock freedom.
           <br />
           <br />
-          instead, it became a maze, complex interfaces, hidden risks, endless
+          Instead, it became a maze, complex interfaces, hidden risks, endless
           scams, and wallets that leave users on their own.
           <br />
           <br />
@@ -109,7 +109,7 @@ const About = () => {
         >
           <h1 className="font-semibold text-3xl">Where it all started</h1>
           <p className="text-sm font-medium">
-            In 2024, a xsall team of engineers, designers, and security
+            In 2024, a small team of engineers, designers, and security
             researchers asked a simple question: “Why does crypto feel powerful
             — yet unsafe?”
           </p>
@@ -216,7 +216,7 @@ const About = () => {
         >
           <h1 className="font-semibold text-3xl">Where it all started</h1>
           <p className="text-sm font-medium">
-            In 2024, a xsall team of engineers, designers, and security
+            In 2024, a small team of engineers, designers, and security
             researchers asked a simple question: “Why does crypto feel powerful
             — yet unsafe?”
           </p>
@@ -808,7 +808,7 @@ const About = () => {
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
           {/* <PhoneIcon /> */}
-          Download Cap Wallet
+          Join the Waitlist
         </motion.button>
       </motion.section>
     </div>

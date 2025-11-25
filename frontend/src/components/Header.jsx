@@ -311,10 +311,10 @@ const Header = ({ className = '' }) => {
   return (
     <div className="sticky top-0 z-100">
       <header className={`mx-4 relative top-4 z-100 ${className}`}>
-        <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-none">
+        <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-auto">
           <a href="/" className="flex justify-center items-center space-x-2">
             <img src="/logo.svg" alt="" className="w-10" />
-            <div className=" font-montserrat text-xl font-bold text-primary pointer-events-auto">
+            <div className="hidden sm:flex font-montserrat text-xl font-bold text-primary pointer-events-auto">
               Cap Wallet
             </div>
           </a>

@@ -123,6 +123,42 @@ const Home = ({ setPageLoading }) => {
       ],
       bg: 'bg-secondary',
     },
+    {
+      hero: 'Security Features',
+      features: [
+        {
+          text: 'True Self-Custody',
+          bg: 'bg-white',
+          textColor: 'text-black',
+          img: '/featcustody.svg',
+        },
+        {
+          text: 'AI Transaction Protection',
+          bg: 'bg-accent',
+          textColor: 'text-white',
+          img: '/AISec.svg',
+        },
+        {
+          text: 'Instant Panic Lock',
+          bg: 'bg-secondary',
+          textColor: 'text-white',
+          img: '/panic-mode.svg',
+        },
+        {
+          text: 'Smart dApp Filtering',
+          bg: 'bg-black',
+          textColor: 'text-white',
+          img: '/dApps.svg',
+        },
+        {
+          text: 'Data-First Privacy',
+          bg: 'bg-primary',
+          textColor: 'text-white',
+          img: '/dataPrivacy.svg',
+        },
+      ],
+      bg: 'bg-primary',
+    },
   ];
 
   // Collect all image URLs for preloading
@@ -178,7 +214,7 @@ const Home = ({ setPageLoading }) => {
                 >
                   The Gateway to the Open Economy
                 </motion.h1>
-                <div className='flex flex-col items-center justify-center sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4'>
+                <div className="flex flex-col items-center justify-center sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4">
                   <motion.button
                     onClick={() => navigate('/download/mobile')}
                     className="btn btn-primary p-6 mb-4"
@@ -317,6 +353,50 @@ const Home = ({ setPageLoading }) => {
                 style={{ scrollbarWidth: 'none' }}
               >
                 {features[1].features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: index * 0.1,
+                      type: 'spring',
+                      bounce: 0.5,
+                    }}
+                    className="h-full"
+                  >
+                    <FeatureCard
+                      feature={feature.text}
+                      bg={feature.bg}
+                      textColor={feature.textColor}
+                      img={feature.img}
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
+
+            <motion.section
+              className="my-24 sm:h-screen flex flex-col md:space-x-4 space-y-4 items-start"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6 }}
+            >
+              <motion.h1
+                className="px-6 text-secondary font-montserrat font-medium text-4xl md:text-5xl text-start"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: 'spring', bounce: 0.4 }}
+              >
+                {features[3].hero}
+              </motion.h1>
+              <div
+                className="w-full flex overflow-x-auto overflow-y-hidden"
+                style={{ scrollbarWidth: 'none' }}
+              >
+                {features[3].features.map((feature, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 50 }}
