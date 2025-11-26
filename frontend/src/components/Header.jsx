@@ -322,7 +322,7 @@ const Header = ({ className = '' }) => {
           <div className="flex space-x-2 items-center justify-center pointer-events-auto">
             <a href="/download" className="btn p-6 btn-primary">
               {/* <PhoneIcon /> */}
-              Join Waitlist
+              Join the Waitlist
             </a>
             <button
               className="lg:hidden btn h-12 w-12 btn-circle bg-white border-none shadow-none btn-accent text-primary transition-transform duration-200 relative z-[102]"

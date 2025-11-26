@@ -398,7 +398,7 @@ const Support = () => {
     <div className="">
       {/* Hero Section */}
       <motion.section
-        className="px-4 pt-24 sm:px-6 max-w-6xl mx-auto min-h-screen flex flex-col justify-center items-center text-center"
+        className="px-4 pt-24 sm:px-6 max-w-6xl mx-auto flex flex-col justify-center items-center text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
@@ -612,7 +612,7 @@ const Support = () => {
           {/* Getting Started Section */}
           <motion.section
             id="getting-started"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -693,7 +693,7 @@ const Support = () => {
           {/* Security, Safety & AI Protection */}
           <motion.section
             id="security"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -775,7 +775,7 @@ const Support = () => {
           {/* Using Cap Wallet (Mobile + Web) */}
           <motion.section
             id="using-wallet"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -857,7 +857,7 @@ const Support = () => {
           {/* Browser Extension Support */}
           <motion.section
             id="browser-extension"
-            className=" px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className=" px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -938,7 +938,7 @@ const Support = () => {
           {/* Advanced & Institutional Features */}
           <motion.section
             id="advanced"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -1019,7 +1019,7 @@ const Support = () => {
           {/* Account, Devices & Settings */}
           <motion.section
             id="account-settings"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -1100,7 +1100,7 @@ const Support = () => {
           {/* Contact Support */}
           <motion.section
             id="contact"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -1120,7 +1120,7 @@ const Support = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <motion.div
+                {/* <motion.div
                   className="p-6 bg-white rounded-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1135,7 +1135,7 @@ const Support = () => {
                     Open Cap Wallet → Settings → Support → Chat with us
                   </p>
                   <button className="btn btn-primary btn-sm">Open Chat</button>
-                </motion.div>
+                </motion.div> */}
 
                 <motion.div
                   className="p-6 bg-white rounded-2xl"
@@ -1150,7 +1150,7 @@ const Support = () => {
                     Email Support
                   </h3>
                   <p className="text-primary text-lg font-semibold mb-2">
-                    support@capwallet.com
+                    support@capwallet.app
                   </p>
                   <p className="text-gray-600">
                     We try to respond within a few hours.
@@ -1204,7 +1204,7 @@ const Support = () => {
           {/* Security & Incident Desk */}
           <motion.section
             id="security"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -1226,7 +1226,7 @@ const Support = () => {
                   Report a Security Issue
                 </h3>
                 <p className="text-red-600 text-2xl font-bold mb-3">
-                  security@capwallet.com
+                  security@capwallet.app
                 </p>
                 <p className="text-gray-700">
                   Include addresses involved, transaction hash, screenshots, and
@@ -1275,7 +1275,7 @@ const Support = () => {
           {/* System Status */}
           <motion.section
             id="status"
-            className="px-4 sm:px-6 max-w-6xl mx-auto py-20"
+            className="px-4 sm:px-6 max-w-6xl mx-auto py-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -1324,44 +1324,11 @@ const Support = () => {
           </motion.section>
 
           {/* Community & Feedback */}
-          <motion.section
-            className="px-6 max-w-6xl mx-auto py-20"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center gap-3 mb-12">
-              <Globe className="text-accent size-10" />
-              <h2 className="text-4xl font-montserrat font-bold text-secondary">
-                Community
-              </h2>
-            </div>
-            <p className="text-lg text-gray-600 mb-8">
-              Join thousands of traders, devs, and Web3 explorers:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-              {community.map((platform, index) => (
-                <motion.div
-                  key={index}
-                  className="p-6 bg-white rounded-2xl border border-gray-200 text-center items-center justify-center flex flex-col hover:border-accent transition-colors cursor-pointer"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img src={platform.icon} alt="" className="w-20" />
-                  <p className="text-gray-700 font-medium text-sm">
-                    {platform.name}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
+          
 
           {/* CTA */}
           <motion.section
-            className="px-6 max-w-6xl mx-auto py-20 text-center"
+            className="px-6 max-w-6xl mx-auto py-10 text-center"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -1374,12 +1341,12 @@ const Support = () => {
             </p>
             <motion.a
               href="/download"
-              className="inline-flex items-center gap-3 btn btn-primary px-8 py-4 text-lg"
+              className="inline-flex items-center gap-3 btn btn-primary px-8 p-6"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
-              Download Cap Wallet
+              Join the Waitlist
             </motion.a>
           </motion.section>
         </>

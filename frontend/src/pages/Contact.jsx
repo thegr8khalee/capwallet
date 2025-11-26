@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageCircle, Shield, Users, Code, Globe, MapPin, Phone } from 'lucide-react';
+import {
+  Mail,
+  MessageCircle,
+  Shield,
+  Users,
+  Code,
+  Globe,
+  MapPin,
+  Phone,
+} from 'lucide-react';
 import PhoneIcon from '../components/Phone';
 
 const Contact = () => {
@@ -28,56 +37,52 @@ const Contact = () => {
       icon: <Mail className="size-10 text-accent" />,
       title: 'General Inquiries',
       description: 'For general questions about Cap Wallet:',
-      contact: 'hello@capwallet.com',
+      contact: 'info@capwallet.app',
     },
     {
       icon: <MessageCircle className="size-10 text-accent" />,
       title: 'Technical & User Support',
       description: 'Need help with your wallet?',
-      contacts: [
-        'Email: support@capwallet.com',
-        'Telegram: t.me/CapWalletSupport',
-        'Discord: discord.gg/capwallet',
-      ],
+      contact: 'support@capwallet.app',
       note: 'We typically respond within 5 minutes.',
     },
     {
       icon: <Shield className="size-10 text-accent" />,
       title: 'Security & Fraud Alerts',
-      description: 'If you believe you encountered a scam, phishing attack, or suspicious dApp:',
-      contact: 'security@capwallet.com',
+      description:
+        'If you believe you encountered a scam, phishing attack, or suspicious dApp:',
+      contact: 'security@capwallet.app',
       note: 'We take all security reports seriously.',
     },
     {
       icon: <Users className="size-10 text-accent" />,
       title: 'Partnerships',
-      description: 'Interested in collaborating or integrating with Cap Wallet?',
-      contact: 'partners@capwallet.com',
+      description:
+        'Interested in collaborating or integrating with Cap Wallet?',
+      contact: 'partnerships@capwallet.app',
     },
     {
       icon: <Mail className="size-10 text-accent" />,
       title: 'Media & Press',
       description: 'For journalists, podcasts, or event organizers:',
-      contact: 'media@capwallet.com',
+      contact: 'media@capwallet.app',
     },
     {
-      icon: <Code className="size-10 text-accent" />,
-      title: 'Developer Contact',
-      description: 'API, dApp integration, or SDK questions:',
-      contacts: [
-        'Email: dev@capwallet.com',
-        'GitHub: github.com/capwallet',
-      ],
+      icon: <img src="/telegram.svg" alt="Telegram" className="size-10" />,
+      title: 'Telegram Community',
+      description:
+        'Join our Telegram to connect with other users and the team:',
+      contact: 'https://t.me/capwallet',
     },
   ];
 
   const community = [
     { name: 'Telegram', icon: 'telegram.svg' },
-    { name: 'Discord', icon: 'discord.svg' },
-    { name: 'X (Twitter)', icon: 'x.svg' },
-    { name: 'YouTube', icon: 'youtube.svg' },
-    { name: 'Reddit', icon: 'reddit.svg' },
-    { name: 'GitHub', icon: 'github.svg' },
+    // { name: 'Discord', icon: 'discord.svg' },
+    // { name: 'X (Twitter)', icon: 'x.svg' },
+    // { name: 'YouTube', icon: 'youtube.svg' },
+    // { name: 'Reddit', icon: 'reddit.svg' },
+    // { name: 'GitHub', icon: 'github.svg' },
   ];
 
   return (
@@ -95,7 +100,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-            <Phone className="text-primary size-20" />
+          <Phone className="text-primary size-20" />
         </motion.div>
         <motion.h1
           className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold text-secondary mb-6"
@@ -111,13 +116,14 @@ const Contact = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          We're here to help—whether you have questions, need support, or want to partner with us.
+          We're here to help—whether you have questions, need support, or want
+          to partner with us.
         </motion.p>
       </motion.section>
 
       {/* Contact Methods Grid */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
+        className="px-6 max-w-6xl mx-auto py-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -138,21 +144,23 @@ const Contact = () => {
                 {method.title}
               </h3>
               <p className="text-gray-600 mb-4">{method.description}</p>
-              
+
               {method.contact && (
                 <p className="text-lg font-semibold text-accent mb-2">
                   {method.contact}
                 </p>
               )}
-              
+
               {method.contacts && (
                 <div className="space-y-1 mb-4">
                   {method.contacts.map((contact, idx) => (
-                    <p key={idx} className="text-gray-700">{contact}</p>
+                    <p key={idx} className="text-gray-700">
+                      {contact}
+                    </p>
                   ))}
                 </div>
               )}
-              
+
               {method.note && (
                 <p className="text-sm text-gray-500 italic">{method.note}</p>
               )}
@@ -162,42 +170,10 @@ const Contact = () => {
       </motion.section>
 
       {/* Community Section */}
-      <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="flex items-center gap-3 mb-12">
-          <Globe className="text-accent size-10" />
-          <h2 className="text-4xl font-montserrat font-bold text-secondary">
-            Community
-          </h2>
-        </div>
-        <p className="text-lg text-gray-600 mb-8">
-          Join thousands of traders, devs, and Web3 explorers:
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-          {community.map((platform, index) => (
-            <motion.div
-              key={index}
-              className="p-6 bg-white rounded-2xl border border-gray-200 text-center items-center justify-center flex flex-col hover:border-accent transition-colors cursor-pointer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-            >
-                <img src={platform.icon} alt="" className='w-20' />
-              <p className="text-gray-700 font-medium text-sm">{platform.name}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
 
       {/* Headquarters */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20"
+        className="px-6 max-w-6xl mx-auto py-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -206,20 +182,23 @@ const Contact = () => {
           <div className="flex items-center gap-3 mb-6">
             <MapPin className="text-primary size-10" />
             <h2 className="text-4xl font-montserrat font-bold text-secondary">
-              Headquarters
+              Headquarter
             </h2>
           </div>
           <p className="text-xl text-gray-700 mb-2">Cap Wallet Inc.</p>
-          <p className="text-lg text-gray-600 mb-4">Delaware, United States</p>
-          <p className="text-sm text-gray-500 italic">
-            (Additional distributed team offices worldwide.)
+          <p className="text- text-gray-600 mb-1">
+            Level 39, Marina Bay Financial Centre
           </p>
+          <p className="text- text-gray-600 mb-1">
+            Tower 2, 10 Marina Boulevard,
+          </p>
+          <p className="text- text-gray-600 mb-1">Singapore 018983</p>
         </div>
       </motion.section>
 
       {/* Contact Form */}
       {/* <motion.section
-        className="px-4 sm:px-6 max-w-4xl mx-auto py-20"
+        className="px-4 sm:px-6 max-w-4xl mx-auto py-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -291,7 +270,7 @@ const Contact = () => {
 
       {/* CTA */}
       <motion.section
-        className="px-6 max-w-6xl mx-auto py-20 text-center"
+        className="px-6 max-w-6xl mx-auto py-10 text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -300,7 +279,8 @@ const Contact = () => {
           Ready to Get Started?
         </h2>
         <p className="text-xl text-gray-600 mb-8">
-          Download Cap Wallet and experience secure, intelligent crypto management.
+          Download Cap Wallet and experience secure, intelligent crypto
+          management.
         </p>
         <motion.a
           href="/download"
@@ -309,7 +289,7 @@ const Contact = () => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          Download Cap Wallet
+          Join the Waitlist
         </motion.a>
       </motion.section>
     </div>

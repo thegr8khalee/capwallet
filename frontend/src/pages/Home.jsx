@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const Home = ({ setPageLoading }) => {
   const features = [
     {
-      hero: 'Wallet Features',
+      hero: 'Wallet',
       features: [
         {
           text: 'Multi-chain wallet',
@@ -52,7 +52,7 @@ const Home = ({ setPageLoading }) => {
       bg: 'bg-primary',
     },
     {
-      hero: 'Trading & DeFi Features',
+      hero: 'Trading & DeFi',
       features: [
         {
           text: 'Cross-chain swaps',
@@ -88,7 +88,7 @@ const Home = ({ setPageLoading }) => {
       bg: 'bg-accent',
     },
     {
-      hero: 'AI Features',
+      hero: 'AI',
       features: [
         {
           text: 'Fee optimization',
@@ -124,7 +124,7 @@ const Home = ({ setPageLoading }) => {
       bg: 'bg-secondary',
     },
     {
-      hero: 'Security Features',
+      hero: 'Security',
       features: [
         {
           text: 'True Self-Custody',
@@ -242,7 +242,7 @@ const Home = ({ setPageLoading }) => {
                     transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
                     {/* <PhoneIcon /> */}
-                    Join Waitlist
+                    Join the Waitlist
                   </motion.button>
                   {/* <motion.button
                     onClick={() => navigate('/download/browser')}

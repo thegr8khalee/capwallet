@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* B. Navigation Links Grid */}
           <div className="flex flex-col space-y-8 w-full">
-            <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 lg:pl-16">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 lg:pl-16">
               {/* 1. Features */}
               {/* <div>
                 <h3 className="text-lg mb-4 text-primary">Features</h3>
@@ -171,19 +171,11 @@ const Footer = () => {
                       GitHub
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition duration-150"
-                    >
-                      Support Email
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
             <div className="w-full mt-8 flex gap-3 justify-center md:justify-start lg:pl-16">
-              <motion.button
+              {/* <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -194,7 +186,7 @@ const Footer = () => {
                 onClick={() => (window.location = '/download')}
               >
                 Join Waitlist
-              </motion.button>
+              </motion.button> */}
               {/* <motion.button
                 onClick={() => navigate('/download/browser')}
                 className="btn btn-outline rounded-full border-accent text-secondary hover:bg-accent hover:text-white p-6 mb-4"
@@ -216,7 +208,7 @@ const Footer = () => {
       </div>
       <div className="text-center md:text-left pt-6 text-sm text-gray-400">
         <p>
-          &copy; {new Date().getFullYear()} CapWallet, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Cap Wallet, Inc. All rights reserved.
         </p>
       </div>
     </footer>
