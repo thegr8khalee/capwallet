@@ -132,7 +132,7 @@ const Footer = () => {
                 <ul className="space-y-3 text-sm text-secondary">
                   <li>
                     <a
-                      href="#"
+                      href="https://x.com/cap_wallet"
                       className="hover:text-primary transition duration-150"
                     >
                      (x) Twitter
@@ -141,15 +141,15 @@ const Footer = () => {
                   
                   <li>
                     <a
-                      href="#"
+                      href="https://instagram.com/cap_wallet"
                       className="hover:text-primary transition duration-150"
                     >
-                     Discord
+                     Instagram
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://youtube.com/cap_wallet"
                       className="hover:text-primary transition duration-150"
                     >
                       YouTube
@@ -157,18 +157,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://t.me/cap_announcements"
                       className="hover:text-primary transition duration-150"
                     >
-                      Reddit
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition duration-150"
-                    >
-                      GitHub
+                      Telegram
                     </a>
                   </li>
                 </ul>

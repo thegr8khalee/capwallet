@@ -311,8 +311,8 @@ const Header = ({ className = '' }) => {
   return (
     <div className="sticky top-0 z-100">
       <header className={`mx-4 relative top-4 z-100 ${className}`}>
-        <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-auto">
-          <a href="/" className="flex justify-center items-center space-x-2">
+        <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-none">
+          <a href="/" className="flex justify-center items-center space-x-2 pointer-events-auto">
             <img src="/logo.svg" alt="" className="w-10" />
             <div className="hidden sm:flex font-montserrat text-xl font-bold text-primary pointer-events-auto">
               Cap Wallet
@@ -345,7 +345,7 @@ const Header = ({ className = '' }) => {
         >
           <div className="w-full flex items-center justify-between px-1 py-1 relative">
             <div className="w-full flex items-center justify-between gap-2 relative z-50">
-              <nav className="w-full flex items-center justify-between  space-x-2 relative">
+              <nav className="w-full flex items-center justify-between space-x-2 relative">
                 {menuItems.map((menu) =>
                   menu.href ? (
                     <a
@@ -356,27 +356,34 @@ const Header = ({ className = '' }) => {
                       <span>{menu.label}</span>
                     </a>
                   ) : (
-                    <button
+                    <div
                       key={menu.key}
-                      ref={(el) => (buttonRefs.current[menu.key] = el)}
-                      className={`flex items-center space-x-1 px-4 py-3 rounded-full transition-all duration-200 google-body-medium ${
-                        hoveredDropdown === menu.key
-                          ? 'bg-accent text-white'
-                          : 'text-secondary hover:bg-primary/10'
-                      }`}
-                      type="button"
+                      className="relative"
                       onMouseEnter={() => handleDesktopMouseEnter(menu.key)}
                       onMouseLeave={handleDesktopMouseLeave}
                     >
-                      <span>{menu.label}</span>
-                      {menu.items && (
-                        <ChevronDown
-                          className={`size-4 transition-transform duration-300 ${
-                            hoveredDropdown === menu.key ? 'rotate-180' : ''
-                          }`}
-                        />
-                      )}
-                    </button>
+                      <button
+                        key={menu.key}
+                        ref={(el) => (buttonRefs.current[menu.key] = el)}
+                        className={`flex items-center space-x-1 px-4 py-3 rounded-full transition-all duration-200 google-body-medium ${
+                          hoveredDropdown === menu.key
+                            ? 'bg-accent text-white'
+                            : 'text-secondary hover:bg-primary/10'
+                        }`}
+                        type="button"
+                        onMouseEnter={() => handleDesktopMouseEnter(menu.key)}
+                        onMouseLeave={handleDesktopMouseLeave}
+                      >
+                        <span>{menu.label}</span>
+                        {menu.items && (
+                          <ChevronDown
+                            className={`size-4 transition-transform duration-300 ${
+                              hoveredDropdown === menu.key ? 'rotate-180' : ''
+                            }`}
+                          />
+                        )}
+                      </button>
+                    </div>
                   )
                 )}
               </nav>

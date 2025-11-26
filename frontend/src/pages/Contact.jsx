@@ -72,7 +72,7 @@ const Contact = () => {
       title: 'Telegram Community',
       description:
         'Join our Telegram to connect with other users and the team:',
-      contact: 'https://t.me/capwallet',
+      contact: 'https://t.me/cap_announcements',
     },
   ];
 
