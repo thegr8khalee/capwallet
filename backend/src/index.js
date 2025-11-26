@@ -25,11 +25,12 @@ if (process.env.NODE_ENV === 'production') {
 
 import waitlistRoutes from './routes/waitlist.routes.js';
 import { connectDB } from './lib/db.js';
+import { verifyConnection } from './services/zoho-mail.service.js';
 
 app.use('/api/waitlist', waitlistRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(
-  connectDB() &&
+  connectDB() && verifyConnection()  &&
   PORT, () => console.log(`🚀 Server running on port ${PORT}`)
 );
