@@ -77,23 +77,19 @@ export const sendEmail = async ({ to, subject, text, html, from }) => {
 
         const payload = createEmailPayload(to, subject, text, html, from);
 
-        const response = await axios.post(
-            `${ZOHO_API_BASE_URL}/accounts/${accountId}/messages`,
-            payload,
-            {
-                headers: {
-                    'Authorization': `Zoho-oauthtoken ${accessToken}`,
-                    'Content-Type': 'application/json',
-                },
-            }
-        );
+            const mailRes = await axios.post(
+                `https://mail.zoho.com/api/accounts/${accountId}/messages`,
+                payload,
+                {
+                    headers: {
+                        Authorization: `Zoho-oauthtoken ${accessToken}`,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
 
         console.log('✅ Email sent successfully via Zoho Mail');
-        return {
-            success: true,
-            messageId: response.data.data?.messageId,
-            status: response.data.status,
-        };
+            return mailRes.data;
     } catch (error) {
         console.error('❌ Zoho Mail API error:', error.response);
 
