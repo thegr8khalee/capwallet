@@ -398,7 +398,7 @@ const About = () => {
             support <br />- ⁠Browser extension + mobile app
           </p>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 100, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -417,7 +417,7 @@ const About = () => {
         >
           <h1 className="text-xs font-medium">Transactions</h1>
           <p className="text-3xl font-semibold">$7.5M</p>
-        </motion.div>
+        </motion.div> */}
       </motion.section>
 
       <motion.section
@@ -485,7 +485,7 @@ const About = () => {
             support <br />- ⁠Browser extension + mobile app
           </p>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{
             top: '50%',
             left: '50%',
@@ -532,7 +532,7 @@ const About = () => {
         >
           <h1 className="text-xs font-medium">Transactions</h1>
           <p className="text-3xl font-semibold">$7.5M</p>
-        </motion.div>
+        </motion.div> */}
       </motion.section>
 
       {/* 2025 */}
@@ -564,7 +564,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 100, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -617,7 +617,7 @@ const About = () => {
           <h1 className="text-xs font-medium">Browser Extension</h1>
           <p className="text-3xl font-semibold">50K+</p>
           <h1 className="text-xs font-medium">installs in under 3 months.</h1>
-        </motion.div>
+        </motion.div> */}
       </motion.section>
 
       <motion.section
@@ -639,8 +639,8 @@ const About = () => {
             position: 'absolute',
           }}
           whileInView={{
-            top: '30%',
-            left: '85%',
+            top: '20%',
+            left: '50%',
             x: '-50%', // keep centering on its own width
             y: '-50%',
           }}
@@ -661,7 +661,7 @@ const About = () => {
             ⁠Human-friendly error explanations
           </p>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{
             top: '50%',
             left: '50%',
@@ -784,7 +784,7 @@ const About = () => {
           <h1 className="text-xs font-medium">Browser Extension</h1>
           <p className="text-3xl font-semibold">500K+</p>
           <h1 className="text-xs font-medium">installs in under 3 months.</h1>
-        </motion.div>
+        </motion.div> */}
       </motion.section>
 
       {/* CTA */}

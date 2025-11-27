@@ -3,16 +3,13 @@ import {
   BookOpen,
   Briefcase,
   ChevronDown,
-  ChevronRight,
   Heart,
   InfoIcon,
   MenuIcon,
-  PlayIcon,
   ScrollText,
   Smartphone,
   X,
 } from 'lucide-react';
-import PhoneIcon from './Phone';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Preload critical header assets
@@ -76,8 +73,6 @@ const Header = ({ className = '' }) => {
   const handleDemoClick = useCallback(() => {
     window.location.href = '/demo';
   }, []);
-
-  const toggleDropdown = (menu) => {};
 
   const menuItems = [
     {
@@ -148,7 +143,6 @@ const Header = ({ className = '' }) => {
       key: 'company',
       items: () => (
         <div className="flex flex-col space-y-4 p-4">
-          {/* About Us */}
           <a
             href="/about"
             className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
@@ -164,7 +158,6 @@ const Header = ({ className = '' }) => {
             </div>
           </a>
 
-          {/* Careers */}
           <a
             href="/careers"
             className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
@@ -180,7 +173,6 @@ const Header = ({ className = '' }) => {
             </div>
           </a>
 
-          {/* Blog */}
           <a
             href="/blogs"
             className="flex items-start gap-3 hover:bg-gray-50 p-2 rounded-lg cursor-pointer"
@@ -298,30 +290,25 @@ const Header = ({ className = '' }) => {
     clearCloseTimeout();
   };
 
-  const handleUseCaseClick = (link) => {
-    if (hoveredDropdown === 'usecases' || openDropdown === 'usecases') {
-      window.location.href = `/usecases/${link}`;
-    } else if (hoveredDropdown === 'products' || openDropdown === 'products') {
-      window.location.href = `/products/${link}`;
-    } else {
-      window.location.href = `/${link}`;
-    }
-  };
-
   return (
     <div className="sticky top-0 z-100">
       <header className={`mx-4 relative top-4 z-100 ${className}`}>
+        {/* FIX APPLIED HERE: Added pointer-events-none to container */}
         <div className="w-full justify-between items-center absolute flex z-[102] pointer-events-none">
-          <a href="/" className="flex justify-center items-center space-x-2 pointer-events-auto">
+          {/* FIX APPLIED HERE: Added pointer-events-auto to Logo */}
+          <a
+            href="/"
+            className="flex justify-center items-center space-x-2 pointer-events-auto"
+          >
             <img src="/logo.svg" alt="" className="w-10" />
-            <div className="hidden sm:flex font-montserrat text-xl font-bold text-primary pointer-events-auto">
+            <div className="hidden sm:flex font-montserrat text-xl font-bold text-primary">
               Cap Wallet
             </div>
           </a>
 
+          {/* FIX APPLIED HERE: Added pointer-events-auto to Button container */}
           <div className="flex space-x-2 items-center justify-center pointer-events-auto">
             <a href="/download" className="btn p-6 btn-primary">
-              {/* <PhoneIcon /> */}
               Join the Waitlist
             </a>
             <button
@@ -338,8 +325,9 @@ const Header = ({ className = '' }) => {
             </button>
           </div>
         </div>
+
         <div
-          className={`hidden absolute  w-full max-w-lg left-1/2 -translate-x-1/2 bg-white rounded-4xl mx-auto lg:flex flex-col transition-all duration-500 ${
+          className={`hidden absolute w-full max-w-lg left-1/2 -translate-x-1/2 bg-white rounded-4xl mx-auto lg:flex flex-col transition-all duration-500 ${
             isMobileMenuOpen ? 'rounded-full' : 'rounded-full'
           }`}
         >
@@ -371,8 +359,7 @@ const Header = ({ className = '' }) => {
                             : 'text-secondary hover:bg-primary/10'
                         }`}
                         type="button"
-                        onMouseEnter={() => handleDesktopMouseEnter(menu.key)}
-                        onMouseLeave={handleDesktopMouseLeave}
+                        // Removed redundant handlers here (parent div handles it)
                       >
                         <span>{menu.label}</span>
                         {menu.items && (
@@ -389,7 +376,6 @@ const Header = ({ className = '' }) => {
               </nav>
             </div>
           </div>
-
           <div
             className={`lg:hidden grid transition-all duration-500 ease-in-out overflow-hidden ${
               isMobileMenuOpen ? 'opacity-100 py-4' : 'max-h-0 opacity-0 py-0'

@@ -234,7 +234,7 @@ const DownloadPage = ({ setPageLoading }) => {
                   disabled={isLoading}
                   className="btn btn-primary p-6"
                 >
-                  {isLoading ? 'Joining...' : 'Join Waitlist'}
+                  {isLoading ? 'Joining...' : 'Join the Waitlist'}
                 </button>
               </motion.form>
 

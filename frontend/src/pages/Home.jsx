@@ -405,7 +405,7 @@ const Home = ({ setPageLoading }) => {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', bounce: 0.4 }}
               >
-                Security Features
+                Security
               </motion.h1>
               <div
                 className="w-full h-full flex overflow-x-auto overflow-y-hidden"
