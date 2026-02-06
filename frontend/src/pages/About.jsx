@@ -150,7 +150,7 @@ const About = () => {
           className="bg-accent max-w-xs mx-auto text-white flex flex-col space-y-4 rounded-3xl p-6 py-8"
         >
           <h1 className="font-semibold text-3xl">The Spark</h1>
-          <p className="text-sm font-medium">AI + Self-Custody</p>
+          <p className="text-sm font-medium">The leading self-custody wallet, powered by AI.</p>
           <p className="text-sm font-medium">
             We didn’t want to build “another wallet.” We wanted a guardian.
           </p>
@@ -275,7 +275,7 @@ const About = () => {
           className="z-8 bg-accent w-xs h-xs aspect-square mx-auto text-white flex flex-col space-y-4 rounded-3xl p-6 py-8"
         >
           <h1 className="font-semibold text-3xl">The Spark</h1>
-          <p className="text-sm font-medium">AI + Self-Custody</p>
+          <p className="text-sm font-medium">The leading self-custody wallet, powered by AI.</p>
           <p className="text-sm font-medium">
             We didn’t want to build “another wallet.” We wanted a guardian.
           </p>
