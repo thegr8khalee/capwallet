@@ -24,10 +24,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 import waitlistRoutes from './routes/waitlist.routes.js';
+import careerRoutes from './routes/career.routes.js';
 import { connectDB } from './lib/db.js';
 import { verifyConnection } from './services/zoho-mail.service.js';
 
 app.use('/api/waitlist', waitlistRoutes);
+app.use('/api/careers', careerRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(
