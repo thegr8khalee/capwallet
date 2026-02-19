@@ -24,7 +24,7 @@ The Cap Wallet Team
     to: email,
     subject: 'We received your application — Cap Wallet',
     text: textContent,
-    from: process.env.ZOHO_EMAIL_USER,
+    from: 'careers@capwallet.app',
   });
 };
 
@@ -53,7 +53,7 @@ Applied at: ${new Date(application.appliedAt).toISOString()}
     to: process.env.ZOHO_EMAIL_USER,
     subject: `New Co-Founder Application: ${application.fullName}`,
     text: textContent,
-    from: process.env.ZOHO_EMAIL_USER,
+    from: 'careers@capwallet.app',
   });
 };
 
