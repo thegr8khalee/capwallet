@@ -73,12 +73,6 @@ const Home = ({ setPageLoading }) => {
           img: '/bridge.svg',
         },
         {
-          text: 'Dark Pool trades',
-          bg: 'bg-primary',
-          textColor: 'text-white',
-          img: '/darkpool.svg',
-        },
-        {
           text: 'On/off-ramp',
           bg: 'bg-secondary',
           textColor: 'text-white',
