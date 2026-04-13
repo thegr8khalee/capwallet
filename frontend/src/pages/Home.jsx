@@ -48,6 +48,12 @@ const Home = ({ setPageLoading }) => {
           textColor: 'text-white',
           img: '/multiwallet.svg',
         },
+        {
+          text: 'Crypto Debit Card',
+          bg: 'bg-secondary',
+          textColor: 'text-white',
+          img: '/card.svg',
+        },
       ],
       bg: 'bg-primary',
     },
@@ -228,7 +234,7 @@ const Home = ({ setPageLoading }) => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, type: 'spring', bounce: 0.4 }}
                 >
-                  The Gateway to the Open Economy
+                  The Gateway to the Open Economy. Guided by AI.
                 </motion.h1>
                 <div className="flex flex-col items-center justify-center sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4">
                   <motion.button
