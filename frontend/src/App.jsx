@@ -1,7 +1,7 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Toaster } from 'react-hot-toast';
 import ScrollToTop from './components/ScrollToTop';
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const Home = lazy(() => import('./pages/Home'));
 const AIFeatures = lazy(() => import('./pages/AIFeatures'));
@@ -20,19 +20,17 @@ const Footer = lazy(() => import('./components/Footer'));
 
 
 function App() {
-  const [pageLoading, setPageLoading] = useState(false);
-
   return (
     <div className="flex flex-col min-h-screen bg-[var(--color-background)] text-[var(--color-text)]">
       <ScrollToTop />
-      <Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center text-xl">Loading...</div>}>
-        {!pageLoading && <Header />}
+      <Suspense fallback={null}>
+        <Header />
         <main className="">
           <Routes>
-            <Route path="/" element={<Home setPageLoading={setPageLoading} />} />
-            <Route path="/ai-features" element={<AIFeatures setPageLoading={setPageLoading} />} />
-            <Route path="/wallet-features" element={<WalletFeatures setPageLoading={setPageLoading} />} />
-            <Route path="/trading-defi" element={<TradingDeFi setPageLoading={setPageLoading} />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/ai-features" element={<AIFeatures />} />
+            <Route path="/wallet-features" element={<WalletFeatures />} />
+            <Route path="/trading-defi" element={<TradingDeFi />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path='/support' element={<Support />} />

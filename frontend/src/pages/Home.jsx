@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FeatureCard from '../components/FeatureCard';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
-const Home = ({ setPageLoading }) => {
+const Home = () => {
   const features = [
     {
       hero: 'Wallet',
@@ -166,12 +166,6 @@ const Home = ({ setPageLoading }) => {
     '/five.svg',
 
   ];
-
-  useEffect(() => {
-    if (setPageLoading) {
-      setPageLoading(false);
-    }
-  }, [setPageLoading]);
 
   const navigate = useNavigate();
 

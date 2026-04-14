@@ -6,7 +6,7 @@ import Benefit from '../components/BenefitsCard';
 import toast from 'react-hot-toast';
 import { useCareerStore } from '../stores/useCareerStore';
 
-const Careers = ({ setPageLoading }) => {
+const Careers = () => {
   const operatingPrinciples = [
     '/lock.svg',
     '/human.svg',
@@ -45,10 +45,6 @@ const Careers = ({ setPageLoading }) => {
     '/Tools1.svg',
     '/team.svg',
   ];
-
-  useEffect(() => {
-    if (setPageLoading) setPageLoading(false);
-  }, [setPageLoading]);
 
   return (
       <div className="pt-24 lg:pt-0">

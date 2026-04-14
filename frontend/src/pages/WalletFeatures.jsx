@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
 
-const WalletFeatures = ({ setPageLoading }) => {
+const WalletFeatures = () => {
   const features = [
     {
       hero: 'Wallet Features',
@@ -188,10 +188,6 @@ const WalletFeatures = ({ setPageLoading }) => {
       answer: 'No. Cap Wallet handles all chain configs automatically.',
     },
   ];
-
-  useEffect(() => {
-    if (setPageLoading) setPageLoading(false);
-  }, [setPageLoading]);
 
   return (
         <div className="pt-24">

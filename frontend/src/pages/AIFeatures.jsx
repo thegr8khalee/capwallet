@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
 
-const AIFeatures = ({ setPageLoading }) => {
+const AIFeatures = () => {
   const benefits = [
     {
       icon: '🚨',
@@ -91,10 +91,6 @@ const AIFeatures = ({ setPageLoading }) => {
     'High-volume traders',
     'Anyone connecting to unknown dApps',
   ];
-
-  useEffect(() => {
-    if (setPageLoading) setPageLoading(false);
-  }, [setPageLoading]);
 
   const faqs = [
     {

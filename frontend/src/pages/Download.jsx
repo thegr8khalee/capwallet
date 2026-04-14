@@ -14,11 +14,7 @@ import {
 import { useParams } from 'react-router-dom';
 import { useWaitlistStore } from '../stores/useWaitlistStore';
 
-const DownloadPage = ({ setPageLoading }) => {
-  useEffect(() => {
-    if (setPageLoading) setPageLoading(false);
-  }, [setPageLoading]);
-
+const DownloadPage = () => {
   const { selectedPlatform } = useParams();
   const [activePlatform, setActivePlatform] = useState(
     selectedPlatform || 'mobile'

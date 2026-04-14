@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
 import { PenIcon, CloudIcon, LockIcon } from 'lucide-react';
 
-const TradingDeFi = ({ setPageLoading }) => {
+const TradingDeFi = () => {
   const securityFeatures = [
     {
       title: 'Local Private Key Generation',
@@ -207,10 +207,6 @@ const TradingDeFi = ({ setPageLoading }) => {
         "Cap Wallet makes it as easy as possible—but yes, you're responsible for your own security. In return, you get full control.",
     },
   ];
-
-  useEffect(() => {
-    if (setPageLoading) setPageLoading(false);
-  }, [setPageLoading]);
 
   return (
         <div className="">
