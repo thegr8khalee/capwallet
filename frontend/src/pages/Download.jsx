@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Download,
   Chrome,
@@ -13,28 +13,11 @@ import {
 } from 'lucide-react';
 import { useParams } from 'react-router-dom';
 import { useWaitlistStore } from '../stores/useWaitlistStore';
-import { useImagePreloader } from '../hooks/useImagePreloader';
-import LoadingScreen from '../components/LoadingScreen';
 
 const DownloadPage = ({ setPageLoading }) => {
-  const imageUrls = [
-    '/playstore.svg',
-    '/appstore.svg',
-    '/chrome.svg',
-    '/firefox.svg',
-    '/brave.svg',
-    '/edge.svg',
-    '/opera.svg',
-    '/safari.svg',
-  ];
-
-  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
-
   useEffect(() => {
-    if (setPageLoading) {
-      setPageLoading(!imagesLoaded);
-    }
-  }, [imagesLoaded, setPageLoading]);
+    if (setPageLoading) setPageLoading(false);
+  }, [setPageLoading]);
 
   const { selectedPlatform } = useParams();
   const [activePlatform, setActivePlatform] = useState(
@@ -152,12 +135,7 @@ const DownloadPage = ({ setPageLoading }) => {
   };
 
   return (
-    <>
-      <AnimatePresence>
-        {!imagesLoaded && <LoadingScreen progress={progress} />}
-      </AnimatePresence>
       <div className="pt-0 lg:pt-0">
-        {imagesLoaded && (
           <>
             {/* Hero Section */}
             <motion.section
@@ -411,9 +389,7 @@ const DownloadPage = ({ setPageLoading }) => {
               </motion.a>
             </motion.section> */}
           </>
-        )}
-      </div>{' '}
-    </>
+      </div>
   );
 };
 

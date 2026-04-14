@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Briefcase, Users, Rocket, ArrowDown, CheckCircle, Send, Upload, MapPin, Clock, Star } from 'lucide-react';
 import Principle from '../components/PrinciplesCard';
 import Benefit from '../components/BenefitsCard';
-import { useImagePreloader } from '../hooks/useImagePreloader';
-import LoadingScreen from '../components/LoadingScreen';
 import toast from 'react-hot-toast';
 import { useCareerStore } from '../stores/useCareerStore';
 
@@ -48,22 +46,12 @@ const Careers = ({ setPageLoading }) => {
     '/team.svg',
   ];
 
-  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
-
   useEffect(() => {
-    if (setPageLoading) {
-      setPageLoading(!imagesLoaded);
-    }
-  }, [imagesLoaded, setPageLoading]);
+    if (setPageLoading) setPageLoading(false);
+  }, [setPageLoading]);
 
   return (
-    <>
-      <AnimatePresence>
-        {!imagesLoaded && <LoadingScreen progress={progress} />}
-      </AnimatePresence>
-
       <div className="pt-24 lg:pt-0">
-        {imagesLoaded && (
           <>
             <motion.section
               className="lg:min-h-screen max-w-4xl mx-auto text-center items-center justify-center flex flex-col"
@@ -594,9 +582,7 @@ const Careers = ({ setPageLoading }) => {
             {/* Application Form */}
             <ApplicationForm />
           </>
-        )}
       </div>
-    </>
   );
 };
 

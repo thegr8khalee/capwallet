@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
-import LoadingScreen from '../components/LoadingScreen';
-import { useImagePreloader } from '../hooks/useImagePreloader';
 
 const WalletFeatures = ({ setPageLoading }) => {
   const features = [
@@ -191,25 +189,11 @@ const WalletFeatures = ({ setPageLoading }) => {
     },
   ];
 
-  const imageUrls = [
-    ...coreChains.map((chain) => `/${chain.logo}`),
-    ...features[0].features.map((f) => f.img),
-    '/app.svg',
-  ];
-  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
-
   useEffect(() => {
-    if (setPageLoading) {
-      setPageLoading(!imagesLoaded);
-    }
-  }, [imagesLoaded, setPageLoading]);
+    if (setPageLoading) setPageLoading(false);
+  }, [setPageLoading]);
 
   return (
-    <>
-      <AnimatePresence>
-        {!imagesLoaded && <LoadingScreen progress={progress} />}
-      </AnimatePresence>
-      {imagesLoaded && (
         <div className="pt-24">
           {/*Hero Section */}
           <motion.section
@@ -534,8 +518,6 @@ const WalletFeatures = ({ setPageLoading }) => {
             </motion.a>
           </motion.section> */}
         </div>
-      )}
-    </>
   );
 };
 

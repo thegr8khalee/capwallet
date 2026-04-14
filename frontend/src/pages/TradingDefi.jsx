@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
-import LoadingScreen from '../components/LoadingScreen';
-import { useImagePreloader } from '../hooks/useImagePreloader';
 import { PenIcon, CloudIcon, LockIcon } from 'lucide-react';
 
 const TradingDeFi = ({ setPageLoading }) => {
@@ -210,24 +208,11 @@ const TradingDeFi = ({ setPageLoading }) => {
     },
   ];
 
-  const imageUrls = [
-    ...securityFeatures.map((f) => `/${f.img}`),
-    ...features[1].features.map(f => f.img)
-  ];
-  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
-
   useEffect(() => {
-    if (setPageLoading) {
-      setPageLoading(!imagesLoaded);
-    }
-  }, [imagesLoaded, setPageLoading]);
+    if (setPageLoading) setPageLoading(false);
+  }, [setPageLoading]);
 
   return (
-    <>
-      <AnimatePresence>
-        {!imagesLoaded && <LoadingScreen progress={progress} />}
-      </AnimatePresence>
-      {imagesLoaded && (
         <div className="">
           {/* Hero Section */}
           <motion.section
@@ -368,8 +353,6 @@ const TradingDeFi = ({ setPageLoading }) => {
             </div>
           </motion.section>
         </div>
-      )}
-    </>
   );
 };
 
