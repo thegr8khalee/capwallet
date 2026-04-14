@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
-import PhoneIcon from '../components/Phone';
 import FeatureCard from '../components/FeatureCard';
-import LoadingScreen from '../components/LoadingScreen';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useImagePreloader } from '../hooks/useImagePreloader';
-import { LiquidGlass } from '@liquidglass/react';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const Home = ({ setPageLoading }) => {
@@ -171,39 +167,18 @@ const Home = ({ setPageLoading }) => {
 
   ];
 
-  // Collect all image URLs for preloading
-  const imageUrls = [
-    ...features.flatMap((section) => section.features.map((f) => f.img)),
-    '/wave.svg',
-    '/card.svg',
-    '/app.svg',
-    '/one.svg',
-    '/two.svg',
-    '/six.svg',
-    '/three.svg',
-    '/four.svg',
-    '/five.svg',
-  ];
-
-  const { imagesLoaded, progress } = useImagePreloader(imageUrls);
-
   useEffect(() => {
     if (setPageLoading) {
-      setPageLoading(!imagesLoaded);
+      setPageLoading(false);
     }
-  }, [imagesLoaded, setPageLoading]);
+  }, [setPageLoading]);
 
   const navigate = useNavigate();
 
   return (
     <>
-      <AnimatePresence>
-        {!imagesLoaded && <LoadingScreen progress={progress} />}
-      </AnimatePresence>
-
       <div className="">
-        {imagesLoaded && (
-          <>
+        <>
             <motion.section
               className="px-6 max-w-6xl mx-auto flex flex-col space-y- items-center justify-center pt-34"
               initial={{ opacity: 0, y: 100 }}
@@ -427,14 +402,15 @@ const Home = ({ setPageLoading }) => {
                     <img
                       src={principle}
                       alt=""
+                      loading="lazy"
+                      decoding="async"
                       className="rounded-3xl h-full m-2"
                     />
                   </motion.div>
                 ))}
               </div>
             </motion.section>
-          </>
-        )}
+        </>
       </div>
     </>
   );

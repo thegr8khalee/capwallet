@@ -12,24 +12,6 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Preload critical header assets
-const preloadHeaderAssets = () => {
-  const criticalAssets = [
-    '/logo.svg',
-    '/AISec.svg',
-    '/multichain.svg',
-    '/non-custodial.svg',
-  ];
-
-  criticalAssets.forEach((src) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-  });
-};
-
 const Header = ({ className = '' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -37,11 +19,6 @@ const Header = ({ className = '' }) => {
   const [dropdownPos, setDropdownPos] = useState(null);
   const [activeModalTab, setActiveModalTab] = useState(null);
   const buttonRefs = useRef({});
-
-  // Preload header assets on mount
-  useEffect(() => {
-    preloadHeaderAssets();
-  }, []);
   const dropdownRef = useRef(null);
   const closeTimeoutRef = useRef(null);
 
@@ -87,6 +64,8 @@ const Header = ({ className = '' }) => {
             <img
               src="/card.svg"
               alt=""
+              loading="lazy"
+              decoding="async"
               className="aspect-square object-covr w-30 rounded-3xl bg-white"
             />
             <div className="flex flex-col justify-between h-full">
@@ -105,6 +84,8 @@ const Header = ({ className = '' }) => {
             <img
               src="/featAI.svg"
               alt=""
+              loading="lazy"
+              decoding="async"
               className="aspect-square object-cover w-30 rounded-3xl"
             />
             <div className="flex flex-col justify-between h-full">
@@ -123,6 +104,8 @@ const Header = ({ className = '' }) => {
             <img
               src="/trading-defi.svg"
               alt=""
+              loading="lazy"
+              decoding="async"
               className="aspect-square object-cover w-30 rounded-3xl"
             />
             <div className="flex flex-col justify-between h-full">

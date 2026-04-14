@@ -11,9 +11,6 @@
     "preview": "vite preview --port $PORT --host 0.0.0.0"
   },
   "dependencies": {
-    "@liquidglass/react": "^0.1.3",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.4.0",
     "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.13.2",
     "Cap-wallet": "file:..",
@@ -21,7 +18,6 @@
     "framer-motion": "^12.23.12",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.536.0",
-    "maath": "^0.10.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.6.0",
@@ -29,7 +25,6 @@
     "react-range": "^1.10.0",
     "react-router-dom": "^7.7.1",
     "tailwindcss": "^4.1.11",
-    "three": "^0.181.2",
     "zustand": "^5.0.7"
   },
   "devDependencies": {

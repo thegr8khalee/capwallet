@@ -11,12 +11,26 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    assetsInlineLimit: 0, // Don't inline assets, keep them as separate files for caching
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-router') || id.includes('/react/') || id.includes('/react-dom/') || id.includes('scheduler')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('react-icons')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('three') || id.includes('@react-three') || id.includes('maath')) {
+              return 'three-vendor';
+            }
+            return 'vendor';
+          }
+          if (id.includes('/src/pages/')) {
+            const match = id.match(/\/src\/pages\/([^/]+?)\.jsx?$/);
+            if (match) return `page-${match[1].toLowerCase()}`;
+          }
         },
         assetFileNames: (assetInfo) => {
           // Cache-friendly asset naming with content hash

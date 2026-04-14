@@ -12,8 +12,9 @@ export const useImagePreloader = (imageUrls) => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // Memoize the image URLs to prevent re-running effect on every render
-  const urls = useMemo(() => imageUrls || [], [JSON.stringify(imageUrls)]);
+  // Memoize based on joined URL string — avoids JSON.stringify on every render
+  const urlKey = (imageUrls || []).join('|');
+  const urls = useMemo(() => imageUrls || [], [urlKey]);
 
   useEffect(() => {
     if (!urls || urls.length === 0) {
