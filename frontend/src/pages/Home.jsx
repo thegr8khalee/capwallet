@@ -197,7 +197,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, type: 'spring', bounce: 0.4 }}
                 >
-                  The Gateway to the Open Economy. Guided by AI.
+                  Cap Wallet - Open Economy. Open to Everyone.
                 </motion.h1>
                 <div className="flex flex-col items-center justify-center sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4">
                   <motion.button
