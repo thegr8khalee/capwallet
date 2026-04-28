@@ -197,7 +197,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, type: 'spring', bounce: 0.4 }}
                 >
-                 Open Money. Open World.
+                 Open Money.<br />Open World.
                 </motion.h1>
                 <div className="flex flex-col items-center justify-center sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4">
                   <motion.button
